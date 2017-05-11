@@ -11,6 +11,7 @@ var app_component_1 = require("./app.component");
 var footer_component_1 = require("./footer.component");
 var navbar_component_1 = require("./navbar.component");
 var home_component_1 = require("./home.component");
+var about_component_1 = require("./about.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -19,7 +20,7 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule],
-        declarations: [app_component_1.AppComponent, footer_component_1.FooterComponent, navbar_component_1.NavbarComponent, home_component_1.HomeComponent],
+        declarations: [app_component_1.AppComponent, footer_component_1.FooterComponent, navbar_component_1.NavbarComponent, home_component_1.HomeComponent, about_component_1.AboutComponent],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);
