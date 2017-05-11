@@ -8,10 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var app_component_1 = require("./app.component");
-var footer_component_1 = require("./footer.component");
-var navbar_component_1 = require("./navbar.component");
-var home_component_1 = require("./home.component");
-var about_component_1 = require("./about.component");
+var footer_component_1 = require("./footer/footer.component");
+var navbar_component_1 = require("./navbar/navbar.component");
+var home_component_1 = require("./views/home.component");
+var about_component_1 = require("./views/about.component");
 var AppModule = (function () {
     function AppModule() {
     }

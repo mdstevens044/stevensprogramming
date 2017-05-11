@@ -2,10 +2,10 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent }    from './app.component';
-import { FooterComponent } from './footer.component';
-import { NavbarComponent } from './navbar.component';
-import { HomeComponent }   from './home.component';
-import { AboutComponent }  from './about.component';
+import { FooterComponent } from './footer/footer.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent }   from './views/home.component';
+import { AboutComponent }  from './views/about.component';
 
 @NgModule({
   imports:      [ BrowserModule ],
