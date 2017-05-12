@@ -7,8 +7,8 @@ import { AboutComponent }  from './views/about.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
+    pathMatch: 'full',
+    redirectTo: 'home'
   },
   {
     path: 'home',

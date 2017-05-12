@@ -12,8 +12,8 @@ var about_component_1 = require("./views/about.component");
 var routes = [
     {
         path: '',
-        redirectTo: '/home',
-        pathMatch: 'full'
+        pathMatch: 'full',
+        redirectTo: 'home'
     },
     {
         path: 'home',
