@@ -8,14 +8,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
-        this.name = 'Angular';
     }
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "\n               <navbar></navbar>\n               <h1>Hello {{name}}</h1>\n               <footer-generic></footer-generic>\n            "
+        template: "\n               <navbar></navbar>\n               <router-outlet></router-outlet>\n               <footer-generic></footer-generic>\n            "
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;

@@ -12,6 +12,7 @@ var footer_component_1 = require("./footer/footer.component");
 var navbar_component_1 = require("./navbar/navbar.component");
 var home_component_1 = require("./views/home.component");
 var about_component_1 = require("./views/about.component");
+var app_routing_module_1 = require("./app-routing.module");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -19,9 +20,20 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule],
-        declarations: [app_component_1.AppComponent, footer_component_1.FooterComponent, navbar_component_1.NavbarComponent, home_component_1.HomeComponent, about_component_1.AboutComponent],
-        bootstrap: [app_component_1.AppComponent]
+        imports: [
+            platform_browser_1.BrowserModule,
+            app_routing_module_1.AppRoutingModule
+        ],
+        declarations: [
+            app_component_1.AppComponent,
+            footer_component_1.FooterComponent,
+            navbar_component_1.NavbarComponent,
+            home_component_1.HomeComponent,
+            about_component_1.AboutComponent
+        ],
+        bootstrap: [
+            app_component_1.AppComponent
+        ]
     })
 ], AppModule);
 exports.AppModule = AppModule;

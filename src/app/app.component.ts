@@ -4,11 +4,9 @@ import { Component } from '@angular/core';
   selector: 'my-app',
   template: `
                <navbar></navbar>
-               <h1>Hello {{name}}</h1>
+               <router-outlet></router-outlet>
                <footer-generic></footer-generic>
             `
 })
 
-export class AppComponent  {
-  name = 'Angular';
-}
+export class AppComponent  { }
