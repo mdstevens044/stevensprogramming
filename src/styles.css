@@ -6,3 +6,9 @@ footer {
   background-color: #222222 !important;
   color: #FFFFFF !important;
 }
+a.brand-disabled {
+  cursor: hand !important;
+}
+a.brand-disabled:hover {
+  color: #9d9d9d !important;
+}
