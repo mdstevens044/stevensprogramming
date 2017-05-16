@@ -2,3 +2,7 @@
 body {
   padding-top: 65px;
 }
+footer {
+  background-color: #222222 !important;
+  color: #FFFFFF !important;
+}
