@@ -27,30 +27,30 @@ a.brand-disabled:hover {
   right: 100px;
   text-align: right;
 }
-.about-page {
+.pages {
   color: #fff;
   padding: 64px 0 50px 0;
 }
 @media screen and (min-width: 768px) {
-  .about-page h1 {
+  .pages h1 {
     text-align: center;
     font-size: 50px;
     padding-bottom: 15px;
   }
 
-  .about-page p {
+  .pages p {
     font-size: larger;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .about-page h1 {
+  .pages h1 {
     text-align: center;
     font-size: 35px;
     padding-bottom: 15px;
   }
 
-  .about-page p {
+  .pages p {
     font-size: large;
   }
 }
