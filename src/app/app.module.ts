@@ -6,6 +6,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent }   from './views/home.component';
 import { AboutComponent }  from './views/about.component';
+import { ProjectsComponent } from './views/projects.component';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
@@ -18,7 +19,8 @@ import { AppRoutingModule } from './app-routing.module';
     FooterComponent,
     NavbarComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    ProjectsComponent
   ],
   bootstrap: [
     AppComponent
