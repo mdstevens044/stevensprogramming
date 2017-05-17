@@ -15,19 +15,6 @@ a.brand-disabled {
 a.brand-disabled:hover {
   color: #FFFFFF !important;
 }
-.banner {
-  background: url("app/img/jumbotron.png") no-repeat center;
-  background-size: 100% 100%;
-  max-width: 100%;
-  min-height: 900px;
-  margin-bottom: 20px;
-}
-.jumbotron-text {
-  position: fixed;
-  bottom: 100px;
-  right: 100px;
-  text-align: right;
-}
 .pages {
   color: #fff;
   padding: 64px 0 50px 0;
@@ -38,9 +25,20 @@ a.brand-disabled:hover {
     font-size: 50px;
     padding-bottom: 15px;
   }
-
   .pages p {
     font-size: larger;
+  }
+  .banner {
+    background: url("app/img/jumbotron.png") no-repeat center;
+    background-size: 100% 100%;
+    min-height: 900px;
+    margin-bottom: 20px;
+  }
+  .jumbotron-text {
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    text-align: right;
   }
 }
 
@@ -50,8 +48,19 @@ a.brand-disabled:hover {
     font-size: 35px;
     padding-bottom: 15px;
   }
-
   .pages p {
     font-size: large;
+  }
+  .banner {
+    background: url("app/img/jumbotron.png") no-repeat center;
+    background-size: 100% 100%;
+    min-height: 800px;
+    margin-bottom: 20px;
+  }
+  .jumbotron-text {
+    position: fixed;
+    bottom: 100px;
+    right: 10px;
+    text-align: right;
   }
 }
