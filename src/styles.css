@@ -54,8 +54,8 @@ a.brand-disabled:hover {
   .banner {
     background: url("app/img/jumbotron.png") no-repeat center;
     background-size: 100% 100%;
-    min-height: 800px;
-    margin-bottom: 20px;
+    min-height: 690px;
+    margin-bottom: 10px;
   }
   .jumbotron-text {
     position: fixed;
