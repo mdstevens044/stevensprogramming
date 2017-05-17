@@ -4,8 +4,10 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
                <navbar></navbar>
-               <router-outlet></router-outlet>
-               <footer-generic></footer-generic>
+			   <div>
+                 <router-outlet></router-outlet>
+                 <footer-generic></footer-generic>
+			   </div>
             `
 })
 
