@@ -21,3 +21,9 @@ a.brand-disabled:hover {
   min-height: 900px;
   margin-bottom: 20px;
 }
+.jumbotron-text {
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  text-align: right;
+}
