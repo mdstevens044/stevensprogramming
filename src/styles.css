@@ -35,6 +35,7 @@ a.brand-disabled:hover {
   .about-page h1 {
     text-align: center;
     font-size: 50px;
+    padding-bottom: 15px;
   }
 
   .about-page p {
@@ -46,6 +47,7 @@ a.brand-disabled:hover {
   .about-page h1 {
     text-align: center;
     font-size: 35px;
+    padding-bottom: 15px;
   }
 
   .about-page p {
