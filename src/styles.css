@@ -1,12 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-  background-color: #222222;
+  background-color: #425B64;
   color: #FFFFFF;
 }
 footer {
-  background-color: #222222 !important;
+  background-color: #425B64 !important;
   color: #FFFFFF !important;
   margin-bottom: 10px;
+}
+.navbar-inverse {
+  background-color: #425B64 !important;
 }
 a.brand-disabled {
   cursor: hand !important;
@@ -29,7 +32,7 @@ a.brand-disabled:hover {
     font-size: larger;
   }
   .banner {
-    background: url("app/img/jumbotron.png") no-repeat center;
+    background: url("app/img/jumbotron.png") repeat center;
     background-size: 100% 100%;
     min-height: 900px;
     margin-bottom: 20px;
@@ -41,7 +44,6 @@ a.brand-disabled:hover {
     text-align: right;
   }
 }
-
 @media screen and (max-width: 810px) {
   .pages h1 {
     text-align: center;
@@ -52,9 +54,9 @@ a.brand-disabled:hover {
     font-size: large;
   }
   .banner {
-    background: url("app/img/jumbotron.png") no-repeat center;
+    background: url("app/img/jumbotron.png") repeat center;
     background-size: 100% 100%;
-    min-height: 690px;
+    min-height: 600px;
     margin-bottom: 10px;
   }
   .jumbotron-text {
