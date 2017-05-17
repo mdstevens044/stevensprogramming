@@ -10,9 +10,10 @@ footer {
 }
 a.brand-disabled {
   cursor: hand !important;
+  color: #FFFFFF !important;
 }
 a.brand-disabled:hover {
-  color: #9d9d9d !important;
+  color: #FFFFFF !important;
 }
 .banner {
   background: url("app/img/jumbotron.png") no-repeat center;
