@@ -8,6 +8,7 @@ import { HomeComponent }   from './views/home.component';
 import { AboutComponent }  from './views/about.component';
 import { ProjectsComponent } from './views/projects.component';
 import { AppRoutingModule } from './app-routing.module';
+import {BlogComponent} from "./views/blog.component";
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { AppRoutingModule } from './app-routing.module';
     NavbarComponent,
     HomeComponent,
     AboutComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    BlogComponent
   ],
   bootstrap: [
     AppComponent
