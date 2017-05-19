@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="pages">
+    <div *ngIf="post">
+      <h1>{{ post.title.rendered }}</h1>
+      <div [innerHTML]="post.content.rendered"></div>
+    </div>
+    <div *ngIf="!post">
+      <p>no post found</p>
+    </div>
+  </div>
+</div>

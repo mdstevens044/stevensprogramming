@@ -4,7 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent }   from './views/home.component';
 import { AboutComponent }  from './views/about.component';
 import { ProjectsComponent }  from './views/projects.component';
-import { BlogComponent } from './views/blog.component';
+import { PostListComponent } from './views/posts/post-list/post-list.component';
+import {PostSingleComponent} from './views/posts/post-single/post-single.component';
 
 const routes: Routes = [
   {
@@ -21,7 +22,11 @@ const routes: Routes = [
   },
   {
     path: 'blog',
-    component: BlogComponent
+    component: PostListComponent
+  },
+  {
+    path: ':slug',
+    component: PostSingleComponent
   }
 ];
 
