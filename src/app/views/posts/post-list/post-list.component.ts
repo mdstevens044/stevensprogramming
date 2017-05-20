@@ -39,4 +39,10 @@ export class PostListComponent implements OnInit {
     this.router.navigate([slug]);
   }
 
+  htmlToPlaintext(text) {
+    text = text ? String(text).replace(/<[^>]+>/gm, '') : '';
+    text = text ? String(text).replace(/\[&hellip;]/gm, '') : '';
+    return text;
+  }
+
 }
