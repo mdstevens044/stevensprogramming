@@ -1,11 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 body {
-  background-color: #425B64;
-  color: #FFFFFF;
+  background-color: #FFFFFF;
+  color: #000000;
 }
 footer {
-  background-color: #425B64 !important;
-  color: #FFFFFF !important;
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
   margin-bottom: 10px;
 }
 .navbar-inverse {
@@ -19,7 +20,7 @@ a.brand-disabled:hover {
   color: #FFFFFF !important;
 }
 .pages {
-  color: #fff;
+  color: #000000;
   padding: 64px 0 50px 0;
 }
 @media screen and (min-width: 810px) {
@@ -34,7 +35,7 @@ a.brand-disabled:hover {
   .banner {
     background: url("app/img/jumbotron.png") repeat center;
     background-size: 100% 100%;
-    min-height: 900px;
+    min-height: 800px;
     margin-bottom: 20px;
   }
   .jumbotron-text {
@@ -42,6 +43,7 @@ a.brand-disabled:hover {
     bottom: 100px;
     right: 100px;
     text-align: right;
+    color: #FFFFFF;
   }
 }
 @media screen and (max-width: 810px) {
@@ -64,5 +66,6 @@ a.brand-disabled:hover {
     bottom: 100px;
     right: 10px;
     text-align: right;
+    color: #FFFFFF;
   }
 }

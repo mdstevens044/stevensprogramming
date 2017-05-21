@@ -1,3 +1,22 @@
-<navbar></navbar>
+<!--<navbar></navbar>-->
+<md-toolbar color="primary">
+  <span>Stevens Programming</span>
+  <span class="spacer"></span>
+</md-toolbar>
+
+<md-tab-group>
+  <md-tab label="Home">
+    <home></home>
+  </md-tab>
+  <md-tab onclick="changeBackground('About')" id="About" label="About">
+    <about></about>
+  </md-tab>
+  <md-tab label="Projects">
+    <projects></projects>
+  </md-tab>
+  <md-tab label="Blog">
+    <app-post-list></app-post-list>
+  </md-tab>
+</md-tab-group>
 <router-outlet></router-outlet>
 <footer-generic></footer-generic>

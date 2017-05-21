@@ -2,6 +2,7 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent }    from './app.component';
 import { FooterComponent } from './footer/footer.component';
@@ -12,13 +13,17 @@ import { ProjectsComponent } from './views/projects.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PostListComponent } from './views/posts/post-list/post-list.component';
 import { PostSingleComponent } from './views/posts/post-single/post-single.component';
+import { MaterialModule } from '@angular/material';
+import 'hammerjs';
 
 @NgModule({
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   declarations: [
     AppComponent,
