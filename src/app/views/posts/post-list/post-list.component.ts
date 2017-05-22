@@ -15,20 +15,21 @@ export class PostListComponent implements OnInit {
 
   posts: Post[];
   error: string;
+  loaded: boolean;
 
   constructor( private postsService: PostsService, private router: Router ) { }
 
-  getPosts(){
+  getPosts() {
     this.postsService
       .getPosts()
       .subscribe(res => {
         // success
+        this.loaded = true;
         this.posts = res;
       }, err => {
         // error
         this.error = err;
       });
-
   }
 
   ngOnInit() {
@@ -37,12 +38,6 @@ export class PostListComponent implements OnInit {
 
   selectPost(slug) {
     this.router.navigate([slug]);
-  }
-
-  htmlToPlaintext(text) {
-    text = text ? String(text).replace(/<[^>]+>/gm, '') : '';
-    text = text ? String(text).replace(/\[&hellip;]/gm, '') : '';
-    return text;
   }
 
 }

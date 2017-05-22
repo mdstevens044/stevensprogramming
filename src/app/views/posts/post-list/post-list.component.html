@@ -1,14 +1,18 @@
-<div class="container">
-  <div class="pages">
-    <ul>
-      <li *ngFor="let post of posts" (click)="selectPost(post.slug)">
-        {{ post.title.rendered }}
-        <p><img src="{{ post.better_featured_image?.media_details.sizes.medium_large.source_url }}">
-        {{ htmlToPlaintext(post.excerpt.rendered) }}</p>
-      </li>
-    </ul>
-    <div *ngIf="error">
-      Error: {{error}}
-    </div>
-  </div>
+<div class="center">
+  <md-spinner *ngIf="!loaded"></md-spinner>
 </div>
+
+<md-card *ngFor="let post of posts">
+  <div>
+    <md-card-header>
+      <md-card-title>{{ post.title.rendered }}</md-card-title>
+    </md-card-header>
+    <img src="{{ post.better_featured_image?.media_details.sizes.medium_large.source_url }}">
+    <md-card-content>
+      <p [innerHTML]="post.excerpt.rendered"></p>
+    </md-card-content>
+    <md-card-actions>
+      <button (click)="selectPost(post.slug)" md-button>Read</button>
+    </md-card-actions>
+  </div>
+</md-card>
