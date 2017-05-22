@@ -5,7 +5,7 @@
       <div [innerHTML]="post.content.rendered"></div>
     </div>
     <div *ngIf="!post">
-      <p>no post found</p>
+      <md-spinner *ngIf="!loaded"></md-spinner>
     </div>
   </div>
 </div>

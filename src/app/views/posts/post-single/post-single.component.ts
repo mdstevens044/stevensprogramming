@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 
 import { Post } from '../post';
 import { PostsService } from '../posts.service';
@@ -14,6 +14,7 @@ import { PostsService } from '../posts.service';
 export class PostSingleComponent implements OnInit {
 
   post: Post;
+  loaded: boolean;
 
   constructor( private postsService: PostsService, private route: ActivatedRoute ) { }
 
@@ -21,17 +22,16 @@ export class PostSingleComponent implements OnInit {
     this.postsService
       .getPost(slug)
       .subscribe(res => {
+        this.loaded = true;
         this.post = res[0];
       });
   }
 
   ngOnInit() {
-
     this.route.params.forEach((params: Params) => {
       let slug = params['slug'];
       this.getPost(slug)
     });
-
   }
 
 }
