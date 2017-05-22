@@ -4,19 +4,16 @@
   <span class="spacer"></span>
 </md-toolbar>
 
-<md-tab-group>
-  <md-tab label="Home">
-    <home></home>
-  </md-tab>
-  <md-tab label="About">
-    <about></about>
-  </md-tab>
-  <md-tab label="Projects">
-    <projects></projects>
-  </md-tab>
-  <md-tab label="Blog">
-    <app-post-list></app-post-list>
-  </md-tab>
-</md-tab-group>
+<nav md-tab-nav-bar>
+  <a md-tab-link
+     *ngFor="let routeLink of routeLinks; let i = index"
+     [routerLink]="routeLink.link"
+     routerLinkActive="active"
+     (click)="activeLinkIndex = i + 1"
+     [active]="activeLinkIndex === i + 1">
+    {{routeLink.label}}
+  </a>
+</nav>
+
 <router-outlet></router-outlet>
 <footer-generic></footer-generic>
