@@ -13,6 +13,10 @@ md-spinner {
   height: 50px;
   margin: 80px auto 100px;
 }
+md-card-title {
+  font-weight: bold;
+  font-size: 18px !important;
+}
 @media screen and (max-width: 810px) {
 .centerImg {
     margin: auto;
