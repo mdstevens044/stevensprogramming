@@ -6,7 +6,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent }    from './app.component';
 import { FooterComponent } from './footer/footer.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent }   from './views/home.component';
 import { AboutComponent }  from './views/about.component';
 import { ProjectsComponent } from './views/projects.component';
@@ -29,7 +28,6 @@ import { GithubComponent } from './views/github/github-list/github.component';
   declarations: [
     AppComponent,
     FooterComponent,
-    NavbarComponent,
     HomeComponent,
     AboutComponent,
     ProjectsComponent,
