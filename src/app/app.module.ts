@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MdTabsModule, MdButtonModule, MdCardModule, MdToolbarModule, MdProgressSpinnerModule } from '@angular/material';
 
 import { AppComponent }    from './app.component';
 import { FooterComponent } from './footer/footer.component';
@@ -12,9 +13,9 @@ import { ProjectsComponent } from './views/projects.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PostListComponent } from './views/posts/post-list/post-list.component';
 import { PostSingleComponent } from './views/posts/post-single/post-single.component';
-import { MaterialModule } from '@angular/material';
-import 'hammerjs';
 import { GithubComponent } from './views/github/github-list/github.component';
+
+import 'hammerjs';
 
 @NgModule({
   imports: [
@@ -23,7 +24,11 @@ import { GithubComponent } from './views/github/github-list/github.component';
     HttpModule,
     FormsModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MdTabsModule,
+    MdButtonModule,
+    MdCardModule,
+    MdToolbarModule,
+    MdProgressSpinnerModule
   ],
   declarations: [
     AppComponent,
