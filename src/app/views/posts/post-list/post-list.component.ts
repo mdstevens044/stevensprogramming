@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 
 import { Post } from '../post';
@@ -38,6 +38,10 @@ export class PostListComponent implements OnInit {
 
   selectPost(slug) {
     this.router.navigate([slug]);
+  }
+
+  transform(input: string, index: number) {
+    return input.split('<br>')[index];
   }
 
 }
