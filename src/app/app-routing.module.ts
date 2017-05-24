@@ -6,6 +6,7 @@ import { AboutComponent }  from './views/about.component';
 import { ProjectsComponent }  from './views/projects.component';
 import { PostListComponent } from './views/posts/post-list/post-list.component';
 import {PostSingleComponent} from './views/posts/post-single/post-single.component';
+import { GithubComponent } from './views/github/github-list/github.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path: 'projects',
     component: ProjectsComponent
+  },
+  {
+    path: 'github',
+    component: GithubComponent
   },
   {
     path: 'blog',

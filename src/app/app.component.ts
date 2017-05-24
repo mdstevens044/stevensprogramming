@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
       {label: 'Home', link: ''},
       {label: 'About', link: 'about'},
       {label: 'Projects', link: 'projects'},
+      {label: 'GitHub', link: 'github'},
       {label: 'Blog', link: 'blog'}
     ];
   }

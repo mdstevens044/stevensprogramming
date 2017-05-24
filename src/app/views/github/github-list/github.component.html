@@ -1,0 +1,11 @@
+<md-spinner *ngIf="!loaded"></md-spinner>
+
+<md-card *ngFor="let project of projects">
+  <div>
+    <md-card-header>
+      <md-card-title>{{ project.name }}</md-card-title>
+      <md-card-subtitle>{{ project.description }}</md-card-subtitle>
+      <md-card-subtitle>{{ project.language }}</md-card-subtitle>
+    </md-card-header>
+  </div>
+</md-card>

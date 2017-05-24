@@ -15,6 +15,7 @@ import { PostListComponent } from './views/posts/post-list/post-list.component';
 import { PostSingleComponent } from './views/posts/post-single/post-single.component';
 import { MaterialModule } from '@angular/material';
 import 'hammerjs';
+import { GithubComponent } from './views/github/github-list/github.component';
 
 @NgModule({
   imports: [
@@ -33,7 +34,8 @@ import 'hammerjs';
     AboutComponent,
     ProjectsComponent,
     PostListComponent,
-    PostSingleComponent
+    PostSingleComponent,
+    GithubComponent
   ],
   providers: [],
   bootstrap: [
