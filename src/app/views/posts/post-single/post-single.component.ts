@@ -34,4 +34,8 @@ export class PostSingleComponent implements OnInit {
     });
   }
 
+  transform(input: string, index: number) {
+    return input.split('<br>')[index];
+  }
+
 }

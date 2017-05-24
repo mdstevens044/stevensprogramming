@@ -1,11 +1,13 @@
-<div class="container">
-  <div class="pages">
-    <div *ngIf="post">
-      <h1>{{ post.title.rendered }}</h1>
-      <div [innerHTML]="post.content.rendered"></div>
-    </div>
-    <div *ngIf="!post">
-      <md-spinner *ngIf="!loaded"></md-spinner>
-    </div>
+<md-card *ngIf="post">
+  <div>
+    <md-card-header>
+      <img md-card-avatar src="assets/penguin.jpg" />
+      <md-card-title>{{ transform(post.title.rendered, 0) }}</md-card-title>
+      <md-card-subtitle>{{ transform(post.title.rendered, 1) }}</md-card-subtitle>
+    </md-card-header>
+    <img class="centerImg" md-card-lg-image src="{{ post.better_featured_image?.media_details.sizes.medium_large.source_url }}" />
+    <md-card-content [innerHTML]="post.content.rendered"></md-card-content>
   </div>
-</div>
+</md-card>
+
+<md-spinner *ngIf="!post"></md-spinner>
