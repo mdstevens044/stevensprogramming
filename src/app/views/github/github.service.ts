@@ -27,5 +27,16 @@ export class GithubService {
 
   }
 
+  getLanguages(repo): Observable<Github[]> {
+    return this.http
+      .get('https://api.github.com/repos/' + this.ghUserName + '/' + repo + '/languages')
+      .map((res: Response) => res.json())
+      .catch((err: Response | any) => {
+        console.error(err);
+        return Observable.throw(err);
+      });
+
+  }
+
 }
 
