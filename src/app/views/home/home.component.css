@@ -1,0 +1,30 @@
+@media screen and (min-width: 810px) {
+  .banner {
+    background: url("../../../assets/jumbotron.png") repeat center;
+    background-size: 100% 100%;
+    min-height: 800px;
+    margin-bottom: 20px;
+  }
+  .jumbotron-text {
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    text-align: right;
+    color: #FFFFFF;
+  }
+}
+@media screen and (max-width: 810px) {
+  .banner {
+    background: url("../../../assets/jumbotron.png") repeat center;
+    background-size: 100% 100%;
+    min-height: 800px;
+    margin-bottom: 20px;
+  }
+  .jumbotron-text {
+    position: fixed;
+    bottom: 100px;
+    right: 10px;
+    text-align: right;
+    color: #FFFFFF;
+  }
+}

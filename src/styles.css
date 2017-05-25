@@ -9,16 +9,6 @@ footer {
   color: #000000 !important;
   margin-bottom: 10px;
 }
-.navbar-inverse {
-  background-color: #425B64 !important;
-}
-a.brand-disabled {
-  cursor: hand !important;
-  color: #FFFFFF !important;
-}
-a.brand-disabled:hover {
-  color: #FFFFFF !important;
-}
 .pages {
   color: #000000;
   padding: 64px 0 50px 0;
@@ -32,19 +22,6 @@ a.brand-disabled:hover {
   .pages p {
     font-size: larger;
   }
-  .banner {
-    background: url("assets/jumbotron.png") repeat center;
-    background-size: 100% 100%;
-    min-height: 800px;
-    margin-bottom: 20px;
-  }
-  .jumbotron-text {
-    position: fixed;
-    bottom: 100px;
-    right: 100px;
-    text-align: right;
-    color: #FFFFFF;
-  }
 }
 @media screen and (max-width: 810px) {
   .pages h1 {
@@ -54,18 +31,5 @@ a.brand-disabled:hover {
   }
   .pages p {
     font-size: large;
-  }
-  .banner {
-    background: url("assets/jumbotron.png") repeat center;
-    background-size: 100% 100%;
-    min-height: 600px;
-    margin-bottom: 10px;
-  }
-  .jumbotron-text {
-    position: fixed;
-    bottom: 100px;
-    right: 10px;
-    text-align: right;
-    color: #FFFFFF;
   }
 }
