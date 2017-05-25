@@ -17,7 +17,7 @@
   .banner {
     background: url("../../../assets/jumbotron.png") repeat center;
     background-size: 100% 100%;
-    min-height: 800px;
+    min-height: 550px;
     margin-bottom: 20px;
   }
   .jumbotron-text {
