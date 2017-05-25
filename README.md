@@ -1,2 +1,2 @@
 # Stevens Programming
-Personal website switching to angular 2 for practice 
+Personal website built with Angular. WordPress API, and GitHub API
