@@ -1,8 +1,13 @@
+p {
+  margin-bottom: 15px;
+  font-size: 21px;
+  font-weight: 200;
+}
 @media screen and (min-width: 810px) {
   .banner {
     background: url("../../../assets/jumbotron.png") repeat center;
     position: fixed;
-    top: 115px;
+    top: 113px;
     bottom: 40px;
     left: 0;
     right: 0;
@@ -17,6 +22,9 @@
     right: 100px;
     text-align: right;
     color: #FFFFFF;
+  }
+  h1 {
+    font-size: 63px;
   }
 }
 @media screen and (max-width: 810px) {
