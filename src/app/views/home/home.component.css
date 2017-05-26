@@ -1,9 +1,15 @@
 @media screen and (min-width: 810px) {
   .banner {
     background: url("../../../assets/jumbotron.png") repeat center;
-    background-size: 100% 100%;
-    min-height: 800px;
-    margin-bottom: 20px;
+    position: fixed;
+    top: 115px;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    overflow: auto;
   }
   .jumbotron-text {
     position: fixed;
