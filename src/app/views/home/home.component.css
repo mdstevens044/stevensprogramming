@@ -33,12 +33,11 @@ p {
   .banner {
     background: url("../../../assets/jumbotron.png") repeat center;
     background-size: 100% 100%;
-    min-height: 550px;
-    margin-bottom: 20px;
+    min-height: 555px;
   }
   .jumbotron-text {
     position: fixed;
-    bottom: 100px;
+    bottom: 90px;
     right: 10px;
     text-align: right;
     color: #FFFFFF;
