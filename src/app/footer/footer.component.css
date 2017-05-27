@@ -1,7 +1,16 @@
 footer {
-  background-color: #FFFFFF;
-  color: #000000;
-  margin-bottom: 10px;
-  text-align: center;
-  padding-top: 40px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+}
+@media screen and (max-width: 810px) {
+  footer {
+    background-color: #FFFFFF;
+    color: #000000;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-top: 40px;
+    position: relative;
+  }
 }
