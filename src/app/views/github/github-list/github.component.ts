@@ -40,7 +40,13 @@ export class GithubComponent implements OnInit {
         .getLanguages(repo)
         .subscribe(res => {
           // success
-          this.languages.push(Object.keys(res).toString());
+          const split = Object.keys(res).toString().split(',');
+          let lang = '';
+          for (let i = 0; i < split.length; i++)
+          {
+            lang += split[i] + ' ';
+          }
+          this.languages.push(lang);
         }, err => {
           // error
           this.error = err;
