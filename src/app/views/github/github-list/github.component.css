@@ -15,3 +15,8 @@ md-card-title {
 md-card-subtitle {
   font-size: 16px !important;
 }
+.readMe {
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 7px;
+}

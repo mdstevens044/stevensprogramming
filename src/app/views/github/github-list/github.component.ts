@@ -17,7 +17,10 @@ export class GithubComponent implements OnInit {
   languages = [];
   error: string;
   loaded: boolean;
-  repoNames = [];
+  repoNamesLang = [];
+  repoNamesRead = [];
+  readMe = [];
+  rm = [];
 
   constructor( private gitService: GithubService, private router: Router ) { }
 
@@ -35,15 +38,14 @@ export class GithubComponent implements OnInit {
   }
 
   getLanguages(repo) {
-    if (!this.repoNames.includes(repo)) {
+    if (!this.repoNamesLang.includes(repo)) {
       this.gitService
         .getLanguages(repo)
         .subscribe(res => {
           // success
           const split = Object.keys(res).toString().split(',');
           let lang = '';
-          for (let i = 0; i < split.length; i++)
-          {
+          for (let i = 0; i < split.length; i++) {
             lang += split[i] + ' ';
           }
           this.languages.push(lang);
@@ -51,7 +53,26 @@ export class GithubComponent implements OnInit {
           // error
           this.error = err;
         });
-      this.repoNames.push(repo);
+      this.repoNamesLang.push(repo);
+    }
+  }
+
+  getReadMe(repo) {
+    if (!this.repoNamesRead.includes(repo)) {
+      this.gitService
+        .getReadMe(repo)
+        .subscribe(res => {
+          // success
+          const read = [];
+          read.push(res.toString().split('#').splice(1));
+          for (let i = 0; i < read.length; i++) {
+            this.readMe.push(read[i]);
+          }
+        }, err => {
+          // error
+          this.error = err;
+        });
+      this.repoNamesRead.push(repo);
     }
   }
 

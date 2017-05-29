@@ -2,12 +2,15 @@
 
 <md-card *ngFor="let project of projects; let i = index">
   {{ getLanguages(project.name) }}
+  {{ getReadMe(project.name) }}
   <div>
     <md-card-header>
       <img md-card-avatar src="assets/penguin.jpg" />
       <md-card-title>{{ project.name }}</md-card-title>
       <md-card-subtitle>{{ project.description }}</md-card-subtitle>
       <md-card-subtitle>{{ languages[i] }}</md-card-subtitle>
+      <md-card-subtitle class="readMe">README.md</md-card-subtitle>
+      <md-card-subtitle [innerHTML]="readMe[i]"></md-card-subtitle>
     </md-card-header>
   </div>
 </md-card>

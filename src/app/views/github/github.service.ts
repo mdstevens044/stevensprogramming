@@ -38,5 +38,16 @@ export class GithubService {
 
   }
 
+  getReadMe(repo): Observable<Github[]> {
+    return this.http
+      .get('https://raw.githubusercontent.com/' + this.ghUserName + '/' + repo + '/master/README.md')
+      .map((res: Response) => res.text())
+      .catch((err: Response | any) => {
+        console.error(err);
+        return Observable.throw(err);
+      });
+
+  }
+
 }
 
