@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@angular/material/prebuilt-themes/blue.css';
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -19,6 +19,9 @@ body {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+.mat-card {
+  border-bottom: none;
 }
 @media screen and (min-width: 810px) {
   .pages {
