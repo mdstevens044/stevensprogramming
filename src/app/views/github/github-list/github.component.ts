@@ -20,7 +20,6 @@ export class GithubComponent implements OnInit {
   repoNamesLang = [];
   repoNamesRead = [];
   readMe = [];
-  rm = [];
 
   constructor( private gitService: GithubService, private router: Router ) { }
 
@@ -64,9 +63,15 @@ export class GithubComponent implements OnInit {
         .subscribe(res => {
           // success
           const read = [];
-          read.push(res.toString().split('#').splice(1));
+          let str = res.toString().replace('##', '');
+          str = str.replace('#', '');
+          read.push(str);
           for (let i = 0; i < read.length; i++) {
-            this.readMe.push(read[i]);
+            if (read[i] !== ' ')
+            {
+              this.readMe.push(read[i]);
+              console.log(read[i]);
+            }
           }
         }, err => {
           // error
