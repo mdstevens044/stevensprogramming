@@ -63,8 +63,8 @@ export class GithubComponent implements OnInit {
         .subscribe(res => {
           // success
           const read = [];
-          let str = res.toString().replace('##', '');
-          str = str.replace('#', '');
+          let str = res.toString().replace(/##/g, '');
+          str = str.replace(/#/g, '');
           read.push(str);
           for (let i = 0; i < read.length; i++) {
             if (read[i] !== ' ') {
