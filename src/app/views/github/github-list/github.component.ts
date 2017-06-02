@@ -67,10 +67,8 @@ export class GithubComponent implements OnInit {
           str = str.replace('#', '');
           read.push(str);
           for (let i = 0; i < read.length; i++) {
-            if (read[i] !== ' ')
-            {
+            if (read[i] !== ' ') {
               this.readMe.push(read[i]);
-              console.log(read[i]);
             }
           }
         }, err => {
