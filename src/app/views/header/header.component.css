@@ -1,0 +1,16 @@
+md-toolbar {
+  height: 75px;
+}
+.center {
+  margin: auto auto;
+}
+.full-width {
+  width: 100%;
+  padding-top: 5px;
+}
+/deep/ .mat-input-placeholder {
+  color: #FFFFFF;
+}
+/deep/ .mat-input-underline {
+  border-color: #FFFFFF !important;
+}
