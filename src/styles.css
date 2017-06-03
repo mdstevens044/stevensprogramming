@@ -2,7 +2,9 @@
 @import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
 html {
   margin: auto auto;
+  height: 100%;
 }
 body {
   margin: auto auto;
+  height: 100%;
 }

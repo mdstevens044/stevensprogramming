@@ -1,0 +1,16 @@
+h3 {
+  text-align: center;
+  margin-bottom: 0;
+}
+.sidenav-container {
+  position: fixed;
+  width: 200px;
+  height: 92%;
+  margin-top: 75px;
+  border-right: 1px solid #000000;
+  border-top: 1px solid #000000;
+  background-color: #B0BEC5;
+}
+.nav-list {
+  padding-left: 15px;
+}

@@ -2,16 +2,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { MdToolbarModule, MdInputModule } from '@angular/material';
+import { MdToolbarModule, MdInputModule, MdSidenavModule, MdListModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './views/header/header.component';
+import { SidebarComponent } from './views/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -19,6 +21,8 @@ import { HeaderComponent } from './views/header/header.component';
     HttpModule,
     MdToolbarModule,
     MdInputModule,
+    MdSidenavModule,
+    MdListModule,
     BrowserAnimationsModule
   ],
   providers: [],
