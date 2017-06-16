@@ -9,7 +9,6 @@ export class SidebarService {
 
   constructor (private http: Http) {}
 
-  // get("/api/folders")
   getFolders(): Promise<Sidebar[]> {
     return this.http.get(this.foldersUrl)
       .toPromise()
@@ -17,7 +16,6 @@ export class SidebarService {
       .catch(this.handleError);
   }
 
-  // post("/api/folders")
   createFolders(newContact: Sidebar): Promise<Sidebar> {
     return this.http.post(this.foldersUrl, newContact)
       .toPromise()
@@ -25,9 +23,6 @@ export class SidebarService {
       .catch(this.handleError);
   }
 
-  // get("/api/folders/:id") endpoint not used by Angular app
-
-  // delete("/api/folders/:id")
   deleteFolders(delContactId: String): Promise<String> {
     return this.http.delete(this.foldersUrl + '/' + delContactId)
       .toPromise()
@@ -35,7 +30,6 @@ export class SidebarService {
       .catch(this.handleError);
   }
 
-  // put("/api/folders/:id")
   updateFolders(putContact: Sidebar): Promise<Sidebar> {
     const putUrl = this.foldersUrl + '/' + putContact._id;
     return this.http.put(putUrl, putContact)
@@ -47,6 +41,6 @@ export class SidebarService {
   private handleError (error: any) {
     const errMsg = (error.message) ? error.message :
       error.status ? `${error.status} - ${error.statusText}` : 'Server error';
-    console.error(errMsg); // log to console instead
+    console.error(errMsg);
   }
 }

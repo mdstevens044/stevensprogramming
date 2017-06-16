@@ -12,59 +12,59 @@ import { SidebarService } from './sidebar.service';
 export class SidebarComponent implements OnInit {
 
   sidebars: Sidebar[];
-  selectedContact: Sidebar;
+  selectedSidebar: Sidebar;
 
-  constructor(private contactService: SidebarService) { }
+  constructor(private sidebarService: SidebarService) { }
 
   ngOnInit() {
-    this.contactService
+    this.sidebarService
       .getFolders()
       .then((sidebars: Sidebar[]) => {
-        this.sidebars = sidebars.map((contact) => {
-          return contact;
+        this.sidebars = sidebars.map((sidebar) => {
+          return sidebar;
         });
       });
   }
 
-  private getIndexOfContact = (contactId: String) => {
-    return this.sidebars.findIndex((contact) => {
-      return contact._id === contactId;
+  private getIndexOfSidebar = (sidebarId: String) => {
+    return this.sidebars.findIndex((sidebar) => {
+      return sidebar._id === sidebarId;
     });
   }
 
-  selectContact(contact: Sidebar) {
-    this.selectedContact = contact;
+  selectSidebar(sidebar: Sidebar) {
+    this.selectedSidebar = sidebar;
   }
 
   createNewFolder() {
-    const contact: Sidebar = {
+    const sidebar: Sidebar = {
       name: ''
     };
 
-    // By default, a newly-created contact will have the selected state.
-    this.selectContact(contact);
+    // By default, a newly-created sidebar will have the selected state.
+    this.selectSidebar(sidebar);
   }
 
-  deleteFolders = (contactId: String) => {
-    const idx = this.getIndexOfContact(contactId);
+  deleteFolders = (sidebarId: String) => {
+    const idx = this.getIndexOfSidebar(sidebarId);
     if (idx !== -1) {
       this.sidebars.splice(idx, 1);
-      this.selectContact(null);
+      this.selectSidebar(null);
     }
     return this.sidebars;
   }
 
-  addFolders = (contact: Sidebar) => {
-    this.sidebars.push(contact);
-    this.selectContact(contact);
+  addFolders = (sidebar: Sidebar) => {
+    this.sidebars.push(sidebar);
+    this.selectSidebar(sidebar);
     return this.sidebars;
   }
 
-  updateFolders = (contact: Sidebar) => {
-    const idx = this.getIndexOfContact(contact._id);
+  updateFolders = (sidebar: Sidebar) => {
+    const idx = this.getIndexOfSidebar(sidebar._id);
     if (idx !== -1) {
-      this.sidebars[idx] = contact;
-      this.selectContact(contact);
+      this.sidebars[idx] = sidebar;
+      this.selectSidebar(sidebar);
     }
     return this.sidebars;
   }
