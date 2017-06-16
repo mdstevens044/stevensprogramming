@@ -1,11 +1,6 @@
 <md-sidenav-container class="sidenav-container" fullscreen>
   <h3>Folders</h3>
   <md-nav-list class="nav-list">
-    <a md-list-item>Link</a>
-    <a md-list-item cdk-focus-region-start>Focus region start</a>
-    <a md-list-item>Link</a>
-    <a md-list-item cdk-focus-initial>Initially focused</a>
-    <a md-list-item cdk-focus-region-end>Focus region end</a>
-    <a md-list-item>Link</a>
+    <a md-list-item *ngFor="let sidebar of sidebars">{{ sidebar.name }}</a>
   </md-nav-list>
 </md-sidenav-container>
