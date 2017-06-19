@@ -8,11 +8,6 @@ var FOLDERS_COLLECTION = "folders";
 var app = express();
 app.use(bodyParser.json());
 
-//define our model for the todos
-var Folder = mongoose.model('folder', {
-  name: String
-});
-
 // Create link to Angular build directory
 var distDir = __dirname + "/dist/";
 app.use(express.static(distDir));
