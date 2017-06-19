@@ -1,7 +1,6 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var mongodb = require("mongodb");
-import * as console from "karma-cli/lib/log";
 var ObjectID = mongodb.ObjectID;
 
 var FOLDERS_COLLECTION = "folders";
