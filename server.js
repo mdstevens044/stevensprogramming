@@ -1,6 +1,7 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var mongodb = require("mongodb");
+import * as console from "karma-cli/lib/log";
 var ObjectID = mongodb.ObjectID;
 
 var FOLDERS_COLLECTION = "folders";
@@ -58,7 +59,7 @@ app.get("/api/folders", function(req, res) {
 
 app.post("/api/folders", function(req, res) {
   var newFolder = req.body;
-
+  console.log(req.body);
   if (!req.body.name) {
     handleError(res, "Invalid user input", "Must provide a name.", 400);
   }

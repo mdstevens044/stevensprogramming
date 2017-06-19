@@ -11,13 +11,10 @@ import { SidebarService } from './sidebar.service';
 
 export class DialogComponent implements OnInit {
 
-  @Input()
-  createHandler: Function;
-
   constructor(private sidebarService: SidebarService) {}
 
-  addFolders(sidebar: Sidebar) {
-    this.sidebarService.createFolders(sidebar)
+  addFolders(element) {
+    this.sidebarService.createFolders(element.value);
   }
 
   ngOnInit() {
