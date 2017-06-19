@@ -15,12 +15,8 @@ export class DialogComponent implements OnInit {
 
   constructor(private sidebarService: SidebarService) {}
 
-  getInput(element) {
-    console.log(element.value + ' a');
-  }
-
   addFolders(element) {
-    this.sidebarService.createFolders(element.value)
+    this.sidebarService.createFolders(element.value);
   }
 
   ngOnInit() {
