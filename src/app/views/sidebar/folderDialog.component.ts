@@ -5,7 +5,8 @@ import { SidebarService } from './sidebar.service';
 @Component({
   selector: 'app-dialog',
   templateUrl: './folderDialog.component.html',
-  styleUrls: ['./folderDialog.component.css']
+  styleUrls: ['./folderDialog.component.css'],
+  providers: [SidebarService]
 })
 
 export class DialogComponent implements OnInit {
