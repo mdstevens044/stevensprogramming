@@ -1,20 +1,26 @@
-import {Component, EventEmitter, OnInit, Output } from '@angular/core';
+import {Component, OnInit } from '@angular/core';
+import { Sidebar } from './sidebar';
+import { SidebarService } from './sidebar.service';
 
 @Component({
   selector: 'app-dialog',
   templateUrl: './folderDialog.component.html',
-  styleUrls: ['./folderDialog.component.css']
+  styleUrls: ['./folderDialog.component.css'],
+  providers: [SidebarService]
 })
 
 export class DialogComponent implements OnInit {
 
-  @Output() addFolders = new EventEmitter<string>();
+  sidebars: Sidebar[];
 
-  constructor() {}
+  constructor(private sidebarService: SidebarService) {}
 
   getInput(element) {
     console.log(element.value + ' a');
-    this.addFolders.emit(element.value);
+  }
+
+  addFolders(element) {
+    this.sidebarService.createFolders(element.value)
   }
 
   ngOnInit() {
