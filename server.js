@@ -59,9 +59,6 @@ app.get("/api/folders", function(req, res) {
 app.post("/api/folders", function(req, res) {
   var newFolder = req.body;
   console.log(req.body);
-  if (!req.body.name) {
-    handleError(res, "Invalid user input", "Must provide a name.", 400);
-  }
 
   db.collection(FOLDERS_COLLECTION).insertOne(newFolder, function(err, doc) {
     if (err) {
