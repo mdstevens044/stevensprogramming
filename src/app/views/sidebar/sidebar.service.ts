@@ -18,7 +18,7 @@ export class SidebarService {
 
   createFolders(newContact: Sidebar): Promise<Sidebar> {
     console.log(newContact);
-    return this.http.post(this.foldersUrl, newContact)
+    return this.http.post(this.foldersUrl, 'name: ' + newContact)
       .toPromise()
       .then(response => response.json() as Sidebar)
       .catch(this.handleError);
