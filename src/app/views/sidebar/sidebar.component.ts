@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import { MdDialog } from '@angular/material';
 import { Sidebar } from './sidebar';
 import { SidebarService } from './sidebar.service';
+import { DialogComponent } from './folderDialog.component';
 
 @Component({
   selector: 'app-sidebar',
@@ -14,7 +16,11 @@ export class SidebarComponent implements OnInit {
   sidebars: Sidebar[];
   selectedSidebar: Sidebar;
 
-  constructor(private sidebarService: SidebarService) { }
+  constructor(private sidebarService: SidebarService, public dialog: MdDialog) { }
+
+  openDialog() {
+    this.dialog.open(DialogComponent);
+  }
 
   ngOnInit() {
     this.sidebarService

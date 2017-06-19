@@ -1,0 +1,19 @@
+/deep/ .mat-dialog-container {
+  background-color: #FFFFFF;
+  padding-top: 0;
+}
+.header {
+  background-color: darkblue;
+  color: #FFFFFF;
+  text-align: center;
+  width: 100%;
+  margin: 0 -24px;
+  padding: 3px 24px;
+  height: 28px;
+}
+.content {
+  padding-top: 20px;
+}
+.submit {
+  margin-left: 80px;
+}
