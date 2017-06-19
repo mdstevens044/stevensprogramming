@@ -58,7 +58,6 @@ app.get("/api/folders", function(req, res) {
 
 app.post("/api/folders", function(req, res) {
   var newFolder = req.body;
-  newFolder.createDate = new Date();
 
   if (!req.body.name) {
     handleError(res, "Invalid user input", "Must provide a name.", 400);
