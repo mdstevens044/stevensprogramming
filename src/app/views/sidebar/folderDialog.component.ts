@@ -1,4 +1,4 @@
-import {Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Sidebar } from './sidebar';
 import { SidebarService } from './sidebar.service';
 
@@ -13,8 +13,9 @@ export class DialogComponent implements OnInit {
 
   constructor(private sidebarService: SidebarService) {}
 
-  addFolders(element: Sidebar) {
-    this.sidebarService.createFolders(element);
+  createFolders(folders: Sidebar) {
+    console.log(folders);
+    this.sidebarService.createFolders(folders);
   }
 
   ngOnInit() {

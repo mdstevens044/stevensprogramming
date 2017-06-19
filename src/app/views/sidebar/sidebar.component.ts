@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MdDialog } from '@angular/material';
 import { Sidebar } from './sidebar';
 import { SidebarService } from './sidebar.service';
@@ -46,8 +46,6 @@ export class SidebarComponent implements OnInit {
     const sidebar: Sidebar = {
       name: ''
     };
-
-    // By default, a newly-created sidebar will have the selected state.
     this.selectSidebar(sidebar);
   }
 
