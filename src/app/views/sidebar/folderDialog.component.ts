@@ -12,16 +12,13 @@ import { SidebarComponent } from './sidebar.component';
 
 export class DialogComponent implements OnInit {
 
-  private sidebarComponent: SidebarComponent
+  private sidebarComponent: SidebarComponent;
 
   constructor(private sidebarService: SidebarService) {}
 
   createFolders(folders: Sidebar) {
     const folderName = JSON.parse('{ "name": ' + JSON.stringify(folders) + ' }');
-    console.log(folderName);
-    this.sidebarService.createFolders(folderName).then((newContact: Sidebar) => {
-      this.sidebarComponent.addFolders(newContact);
-    });
+    this.sidebarService.createFolders(folderName);
   }
 
   ngOnInit() {
