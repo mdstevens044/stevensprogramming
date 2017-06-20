@@ -17,7 +17,7 @@ export class SidebarService {
       .catch(this.handleError);
   }
 
-  createFolders(newContact) {
+  createFolders(newContact: Sidebar) {
     return this.http.post(this.foldersUrl, newContact)
       .map((res: Response) => res.json())
       .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
