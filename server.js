@@ -57,8 +57,8 @@ app.get("/api/folders", function(req, res) {
 });
 
 app.post("/api/folders", function(req, res) {
-  var newFolder = req;
-  handleError(res, req.body);
+  var newFolder = req.body;
+
   db.collection(FOLDERS_COLLECTION).insertOne(newFolder, function(err, doc) {
     if (err) {
       handleError(res, err.message, "Failed to create new folder.");
