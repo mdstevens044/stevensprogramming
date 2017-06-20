@@ -19,6 +19,7 @@ export class DialogComponent implements OnInit {
   createFolders(folders: Sidebar) {
     const folderName = JSON.parse('{ "name": ' + JSON.stringify(folders) + ' }');
     this.sidebarService.createFolders(folderName);
+    this.sidebarComponent.addFolders(folders);
   }
 
   ngOnInit() {
