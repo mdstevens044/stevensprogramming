@@ -17,8 +17,9 @@ export class DialogComponent implements OnInit {
   constructor(private sidebarService: SidebarService) {}
 
   createFolders(folders: Sidebar) {
-    // const folderName = JSON.parse('{ "name": ' + JSON.stringify(folders.value) + ' }');
-    this.sidebarService.createFolders(folders).then((newContact: Sidebar) => {
+    const folderName = JSON.parse('{ "name": ' + JSON.stringify(folders) + ' }');
+    console.log(folderName);
+    this.sidebarService.createFolders(folderName).then((newContact: Sidebar) => {
       this.sidebarComponent.addFolders(newContact);
     });
   }
