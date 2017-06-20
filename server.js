@@ -65,7 +65,7 @@ app.post("/api/folders", function(req, res) {
     } else {
       res.status(201).json(doc.ops[0]);
     }
-  });
+  }).then(returnValue);
 });
 
 /*  "/api/folders/:id"

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Sidebar } from './sidebar';
 import { SidebarService } from './sidebar.service';
+import { SidebarComponent } from './sidebar.component';
 
 @Component({
   selector: 'app-dialog',
@@ -11,11 +12,15 @@ import { SidebarService } from './sidebar.service';
 
 export class DialogComponent implements OnInit {
 
+  private sidebarComponent: SidebarComponent
+
   constructor(private sidebarService: SidebarService) {}
 
-  createFolders(folders) {
-    const folderName = JSON.parse('{ "name": ' + JSON.stringify(folders.value) + ' }');
-    this.sidebarService.createFolders(folderName);
+  createFolders(folders: Sidebar) {
+    // const folderName = JSON.parse('{ "name": ' + JSON.stringify(folders.value) + ' }');
+    this.sidebarService.createFolders(folders).then((newContact: Sidebar) => {
+      this.sidebarComponent.addFolders(newContact);
+    });
   }
 
   ngOnInit() {
