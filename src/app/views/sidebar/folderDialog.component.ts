@@ -15,7 +15,6 @@ export class DialogComponent implements OnInit {
 
   createFolders(folders) {
     const folderName = JSON.parse('{ "name": ' + JSON.stringify(folders.value) + ' }');
-    console.log(folderName);
     this.sidebarService.createFolders(folderName);
   }
 
