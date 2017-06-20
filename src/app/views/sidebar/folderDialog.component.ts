@@ -13,9 +13,10 @@ export class DialogComponent implements OnInit {
 
   constructor(private sidebarService: SidebarService) {}
 
-  createFolders(folders: Sidebar) {
-    console.log(folders);
-    this.sidebarService.createFolders(folders);
+  createFolders(folders) {
+    const folderName = JSON.parse('{ "name": ' + JSON.stringify(folders.value) + ' }');
+    console.log(folderName);
+    this.sidebarService.createFolders(folderName);
   }
 
   ngOnInit() {

@@ -16,11 +16,8 @@ export class SidebarService {
       .catch(this.handleError);
   }
 
-  createFolders(newContact: Sidebar): Promise<Sidebar> {
-    return this.http.post(this.foldersUrl, newContact)
-      .toPromise()
-      .then(response => response.json() as Sidebar)
-      .catch(this.handleError);
+  createFolders(newContact: Sidebar) {
+    return this.http.post(this.foldersUrl, newContact);
   }
 
   deleteFolders(delContactId: String): Promise<String> {
