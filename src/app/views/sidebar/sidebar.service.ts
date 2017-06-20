@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Sidebar } from './sidebar';
 import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class SidebarService {
@@ -17,7 +18,9 @@ export class SidebarService {
   }
 
   createFolders(newContact: Sidebar) {
-    return this.http.post(this.foldersUrl, newContact);
+    return this.http.post(this.foldersUrl, newContact)
+      .map((res: Response) => res.json())
+      .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
   }
 
   deleteFolders(delContactId: String): Promise<String> {
