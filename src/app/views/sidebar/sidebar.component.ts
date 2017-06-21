@@ -32,7 +32,7 @@ export class SidebarComponent implements OnInit {
     console.log(folders);
     const folderName = JSON.parse('{ "name": ' + JSON.stringify(folders) + ' }');
     this.sidebarService.createFolders(folderName);
-    this.addFolders(folders);
+    this.addFolders(folderName);
   }
 
   ngOnInit() {
