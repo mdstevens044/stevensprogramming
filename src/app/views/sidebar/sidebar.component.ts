@@ -15,7 +15,6 @@ export class SidebarComponent implements OnInit {
 
   sidebars: Sidebar[];
   selectedSidebar: Sidebar;
-  public result: any;
 
   constructor(private sidebarService: SidebarService, private dialogsService: DialogsService) { }
 
@@ -23,13 +22,9 @@ export class SidebarComponent implements OnInit {
     this.dialogsService
         .confirm()
         .subscribe(res => this.createFolders(res));
-    const folderName = JSON.parse('{ "name": ' + JSON.stringify(this.result) + ' }');
-    this.sidebarService.createFolders(folderName);
-    this.addFolders(this.result);
   }
 
   createFolders(folders) {
-    console.log(folders);
     const folderName = JSON.parse('{ "name": ' + JSON.stringify(folders) + ' }');
     this.sidebarService.createFolders(folderName);
     this.addFolders(folderName);
@@ -72,7 +67,6 @@ export class SidebarComponent implements OnInit {
   }
 
   addFolders(sidebar: Sidebar) {
-    console.log(this.sidebars);
     this.sidebars.push(sidebar);
     this.selectSidebar(sidebar);
     return this.sidebars;

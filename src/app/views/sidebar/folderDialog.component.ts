@@ -13,15 +13,7 @@ import { SidebarComponent } from './sidebar.component';
 
 export class DialogComponent implements OnInit {
 
-  private sidebarComponent: SidebarComponent;
-
   constructor(public dialogRef: MdDialogRef<DialogComponent>) {}
-
-  /*createFolders(folders: Sidebar) {
-    const folderName = JSON.parse('{ "name": ' + JSON.stringify(folders) + ' }');
-    this.sidebarService.createFolders(folderName);
-    this.sidebarComponent.addFolders(folders);
-  }*/
 
   ngOnInit() {
 
