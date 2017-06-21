@@ -17,6 +17,9 @@ import { DialogComponent } from './views/sidebar/folderDialog.component';
     SidebarComponent,
     DialogComponent
   ],
+  exports: [
+    DialogComponent
+  ],
   entryComponents: [
     DialogComponent
   ],

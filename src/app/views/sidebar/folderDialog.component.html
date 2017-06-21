@@ -8,10 +8,10 @@
     </md-input-container>
   </div>
   <md-dialog-actions>
-    <button md-raised-button md-dialog-close>
+    <button md-raised-button md-dialog-close (click)="dialogRef.close()">
       Close
     </button>
-    <button md-raised-button class="submit" md-dialog-close (click)="createFolders(name.value)">
+    <button md-raised-button class="submit" md-dialog-close (click)="dialogRef.close(name.value)">
       Submit
     </button>
   </md-dialog-actions>
