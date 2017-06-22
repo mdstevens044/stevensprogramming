@@ -1,14 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { MdDialogRef } from '@angular/material';
-import { Sidebar } from './sidebar';
-import { SidebarService } from './sidebar.service';
-import { SidebarComponent } from './sidebar.component';
+import { FoldersService } from './services/folder.service';
 
 @Component({
   selector: 'app-dialog',
-  templateUrl: './folderDialog.component.html',
-  styleUrls: ['./folderDialog.component.css'],
-  providers: [SidebarService]
+  templateUrl: './dialog.component.html',
+  styleUrls: ['./dialog.component.css'],
+  providers: [FoldersService]
 })
 
 export class DialogComponent implements OnInit {

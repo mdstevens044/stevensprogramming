@@ -1,4 +1,4 @@
-export class Sidebar {
+export class Folders {
   _id?: string;
   name: string;
 }

@@ -1,25 +1,25 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import { Sidebar } from './sidebar';
+import { Folders } from '../folders';
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
-export class SidebarService {
+export class FoldersService {
   private foldersUrl = '/api/folders';
 
   constructor (private http: Http) {}
 
-  getFolders(): Promise<Sidebar[]> {
+  getFolders(): Promise<Folders[]> {
     return this.http.get(this.foldersUrl)
       .toPromise()
-      .then(response => response.json() as Sidebar[])
+      .then(response => response.json() as Folders[])
       .catch(this.handleError);
   }
 
-  createFolders(newContact: Sidebar): Promise<Sidebar> {
+  createFolders(newContact: Folders): Promise<Folders> {
     return this.http.post(this.foldersUrl, newContact)
       .toPromise()
-      .then(response => response.json() as Sidebar)
+      .then(response => response.json() as Folders)
       .catch(this.handleError);
   }
 
@@ -30,11 +30,11 @@ export class SidebarService {
       .catch(this.handleError);
   }
 
-  updateFolders(putContact: Sidebar): Promise<Sidebar> {
+  updateFolders(putContact: Folders): Promise<Folders> {
     const putUrl = this.foldersUrl + '/' + putContact._id;
     return this.http.put(putUrl, putContact)
       .toPromise()
-      .then(response => response.json() as Sidebar)
+      .then(response => response.json() as Folders)
       .catch(this.handleError);
   }
 
