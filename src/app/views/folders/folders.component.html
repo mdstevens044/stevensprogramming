@@ -1,7 +1,10 @@
 <md-sidenav-container class="sidenav-container" fullscreen>
   <h3>Folders</h3>
   <md-nav-list class="nav-list">
-    <a md-list-item *ngFor="let sidebar of sidebars">{{ sidebar.name }}</a>
+    <div *ngFor="let sidebar of sidebars">
+      <a md-list-item>{{ sidebar.name }}</a>
+      <a  md-list-item (click)="deleteFolders(sidebar._id)"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+    </div>
   </md-nav-list>
   <div class="centerBtn">
     <button md-raised-button (click)="openDialog()">Add Folder</button>
