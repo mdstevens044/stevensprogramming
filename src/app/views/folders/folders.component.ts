@@ -62,6 +62,7 @@ export class FoldersComponent implements OnInit {
       this.sidebars.splice(idx, 1);
       this.selectFolders(null);
     }
+    this.sidebarService.deleteFolders(sidebarId);
     return this.sidebars;
   }
 
