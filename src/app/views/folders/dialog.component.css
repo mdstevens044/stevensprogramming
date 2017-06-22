@@ -2,6 +2,10 @@
   background-color: #FFFFFF;
   padding-top: 0;
 }
+.mat-raised-button {
+  background-color: darkblue;
+  color: #FFFFFF;
+}
 .header {
   background-color: darkblue;
   color: #FFFFFF;

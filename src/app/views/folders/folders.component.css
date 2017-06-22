@@ -2,6 +2,9 @@ h3 {
   text-align: center;
   margin-bottom: 0;
 }
+.mat-raised-button {
+  background-color: darkblue;
+}
 .sidenav-container {
   position: fixed;
   width: 200px;
@@ -13,4 +16,7 @@ h3 {
 }
 .nav-list {
   padding-left: 15px;
+}
+.centerBtn {
+  padding-left: 48px;
 }

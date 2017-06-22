@@ -2,6 +2,8 @@
   <h3>Folders</h3>
   <md-nav-list class="nav-list">
     <a md-list-item *ngFor="let sidebar of sidebars">{{ sidebar.name }}</a>
-    <button md-raised-button (click)="openDialog()">Add Folder</button>
   </md-nav-list>
+  <div class="centerBtn">
+    <button md-raised-button (click)="openDialog()">Add Folder</button>
+  </div>
 </md-sidenav-container>
