@@ -2,8 +2,16 @@
   <h3>Folders</h3>
   <md-nav-list class="nav-list">
     <div *ngFor="let sidebar of sidebars">
-      <a md-list-item>{{ sidebar.name }}</a>
-      <a  md-list-item (click)="deleteFolders(sidebar._id)"><i class="fa fa-times fa-fw" aria-hidden="true"></i></a>
+      <table>
+        <tr>
+          <td>
+            <md-list-item>{{ sidebar.name }}</md-list-item>
+          </td>
+          <td>
+            <md-list-item a (click)="deleteFolders(sidebar._id)"><i class="fa fa-times fa-fw" aria-hidden="true"></i></md-list-item>
+          </td>
+        </tr>
+      </table>
     </div>
   </md-nav-list>
   <div class="centerBtn">
