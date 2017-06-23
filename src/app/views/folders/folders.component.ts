@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Folders } from './folders';
 import { FoldersService } from './services/folder.service';
-import { DialogsService } from './services/dialog.service';
+import { AddDialogsService } from './services/add-dialog.service';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './folders.component.html',
   styleUrls: ['./folders.component.css'],
-  providers: [FoldersService, DialogsService]
+  providers: [FoldersService, AddDialogsService]
 })
 
 export class FoldersComponent implements OnInit {
@@ -15,7 +15,7 @@ export class FoldersComponent implements OnInit {
   sidebars: Folders[];
   selectedFolders: Folders;
 
-  constructor(private sidebarService: FoldersService, private dialogsService: DialogsService) { }
+  constructor(private sidebarService: FoldersService, private dialogsService: AddDialogsService) { }
 
   openDialog() {
     this.dialogsService

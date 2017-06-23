@@ -4,14 +4,14 @@ import { FoldersService } from './services/folder.service';
 
 @Component({
   selector: 'app-dialog',
-  templateUrl: './dialog.component.html',
-  styleUrls: ['./dialog.component.css'],
+  templateUrl: './add-dialog.component.html',
+  styleUrls: ['./add-dialog.component.css'],
   providers: [FoldersService]
 })
 
-export class DialogComponent implements OnInit {
+export class AddDialogComponent implements OnInit {
 
-  constructor(public dialogRef: MdDialogRef<DialogComponent>) {}
+  constructor(public dialogRef: MdDialogRef<AddDialogComponent>) {}
 
   ngOnInit() {
 

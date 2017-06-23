@@ -8,20 +8,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './views/header/header.component';
 import { FoldersComponent } from './views/folders/folders.component';
-import { DialogComponent } from './views/folders/dialog.component';
+import { AddDialogComponent } from './views/folders/add-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FoldersComponent,
-    DialogComponent
+    AddDialogComponent
   ],
   exports: [
-    DialogComponent
+    AddDialogComponent
   ],
   entryComponents: [
-    DialogComponent
+    AddDialogComponent
   ],
   imports: [
     BrowserModule,
