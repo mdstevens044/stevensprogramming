@@ -1,6 +1,10 @@
 h3 {
   text-align: center;
   margin-bottom: 0;
+  padding-bottom: 15px;
+}
+table {
+  padding-bottom: 15px;
 }
 .mat-raised-button {
   background-color: darkblue;
