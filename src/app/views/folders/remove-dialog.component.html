@@ -1,0 +1,16 @@
+<form #f="ngForm" novalidate autocomplete="off">
+  <div class="header">
+    <h1 md-dialog-title>Delete Folder</h1>
+  </div>
+  <div class="content">
+    Are you sure you want to delete this folder?
+  </div>
+  <md-dialog-actions>
+    <button md-raised-button md-dialog-close (click)="dialogRef.close()">
+      Cancel
+    </button>
+    <button md-raised-button class="submit" md-dialog-close (click)="dialogRef.close('Yes')">
+      Delete
+    </button>
+  </md-dialog-actions>
+</form>

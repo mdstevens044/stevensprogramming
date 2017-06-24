@@ -8,13 +8,13 @@
             <md-list-item>{{ sidebar.name }}</md-list-item>
           </td>
           <td>
-            <md-list-item a (click)="deleteFolders(sidebar._id)"><i class="fa fa-times fa-fw" aria-hidden="true"></i></md-list-item>
+            <md-list-item a (click)="openDelDialog(sidebar._id)"><i class="fa fa-times fa-fw" aria-hidden="true"></i></md-list-item>
           </td>
         </tr>
       </table>
     </div>
   </md-nav-list>
   <div class="centerBtn">
-    <button md-raised-button (click)="openDialog()">Add Folder</button>
+    <button md-raised-button (click)="openAddDialog()">Add Folder</button>
   </div>
 </md-sidenav-container>

@@ -2,25 +2,35 @@ import { Component, OnInit } from '@angular/core';
 import { Folders } from './folders';
 import { FoldersService } from './services/folder.service';
 import { AddDialogsService } from './services/add-dialog.service';
+import { RemoveDialogsService } from './services/remove-dialog.service';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './folders.component.html',
   styleUrls: ['./folders.component.css'],
-  providers: [FoldersService, AddDialogsService]
+  providers: [FoldersService, AddDialogsService, RemoveDialogsService]
 })
 
 export class FoldersComponent implements OnInit {
 
   sidebars: Folders[];
   selectedFolders: Folders;
+  sidebarId: String;
 
-  constructor(private sidebarService: FoldersService, private dialogsService: AddDialogsService) { }
+  constructor(private sidebarService: FoldersService, private addDialogsService: AddDialogsService,
+              private delDialogsService: RemoveDialogsService) { }
 
-  openDialog() {
-    this.dialogsService
+  openAddDialog() {
+    this.addDialogsService
         .confirm()
         .subscribe(res => this.createFolders(res));
+  }
+
+  openDelDialog(sidebarID: String) {
+    this.sidebarId = sidebarID;
+    this.delDialogsService
+      .confirm()
+      .subscribe(res => this.deleteFolders(res.toString()));
   }
 
   createFolders(folders) {
@@ -56,14 +66,16 @@ export class FoldersComponent implements OnInit {
     this.selectFolders(sidebar);
   }
 
-  deleteFolders = (sidebarId: String) => {
-    const idx = this.getIndexOfFolders(sidebarId);
-    if (idx !== -1) {
-      this.sidebars.splice(idx, 1);
-      this.selectFolders(null);
+  deleteFolders(response: String) {
+    if (response === 'Yes') {
+      const idx = this.getIndexOfFolders(this.sidebarId);
+      if (idx !== -1) {
+        this.sidebars.splice(idx, 1);
+        this.selectFolders(null);
+      }
+      this.sidebarService.deleteFolders(this.sidebarId);
+      return this.sidebars;
     }
-    this.sidebarService.deleteFolders(sidebarId);
-    return this.sidebars;
   }
 
   addFolders(sidebar: Folders) {

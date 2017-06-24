@@ -9,19 +9,23 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './views/header/header.component';
 import { FoldersComponent } from './views/folders/folders.component';
 import { AddDialogComponent } from './views/folders/add-dialog.component';
+import { RemoveDialogComponent } from './views/folders/remove-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FoldersComponent,
-    AddDialogComponent
+    AddDialogComponent,
+    RemoveDialogComponent
   ],
   exports: [
-    AddDialogComponent
+    AddDialogComponent,
+    RemoveDialogComponent
   ],
   entryComponents: [
-    AddDialogComponent
+    AddDialogComponent,
+    RemoveDialogComponent
   ],
   imports: [
     BrowserModule,
