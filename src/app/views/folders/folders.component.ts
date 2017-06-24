@@ -67,7 +67,6 @@ export class FoldersComponent implements OnInit {
   }
 
   deleteFolders(response: String) {
-    console.log(response + ' a ' + this.sidebarId);
     if (response === 'Yes') {
       const idx = this.getIndexOfFolders(this.sidebarId);
       if (idx !== -1) {
