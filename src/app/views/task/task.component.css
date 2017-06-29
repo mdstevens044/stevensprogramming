@@ -1,3 +1,12 @@
-/deep/ .mat-expansion-panel {
+.mat-expansion-panel {
   width: 100% !important;
+  background-color: darkblue;
+  font-weight: bold;
+}
+.mat-expansion-panel-header-description {
+  color: #000000;
+  padding-top: 15px;
+}
+/deep/ .mat-expansion-panel-body {
+  background-color: #FFFFFF;
 }
