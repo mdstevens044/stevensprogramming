@@ -1,20 +1,27 @@
-<md-sidenav-container class="sidenav-container" fullscreen>
-  <h3>Folders</h3>
-  <md-nav-list class="nav-list">
-    <div *ngFor="let sidebar of sidebars">
-      <table cellpadding="0" cellspacing="0">
-        <tr>
-          <td width="75%">
-            <md-list-item>{{ sidebar.name }}</md-list-item>
-          </td>
-          <td>
-            <md-list-item a (click)="openDelDialog(sidebar._id)"><i class="fa fa-times fa-fw" aria-hidden="true"></i></md-list-item>
-          </td>
-        </tr>
-      </table>
-    </div>
-  </md-nav-list>
-  <div class="centerBtn">
-    <button md-raised-button (click)="openAddDialog()">Add Folder</button>
-  </div>
-</md-sidenav-container>
+<md-grid-list cols="10" class="gridHeight">
+  <md-grid-tile [colspan]="1" class="sidenav-container">
+    <md-sidenav-container fullscreen>
+      <h3>Folders</h3>
+      <md-nav-list class="nav-list">
+        <div *ngFor="let sidebar of sidebars">
+          <table cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="75%">
+                <md-list-item>{{ sidebar.name }}</md-list-item>
+              </td>
+              <td>
+                <md-list-item a (click)="openDelDialog(sidebar._id)"><i class="fa fa-times fa-fw" aria-hidden="true"></i></md-list-item>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </md-nav-list>
+      <div class="centerBtn">
+        <button md-raised-button (click)="openAddDialog()">Add Folder</button>
+      </div>
+    </md-sidenav-container>
+  </md-grid-tile>
+  <md-grid-tile [colspan]="9" class="main-container">
+    <app-task></app-task>
+  </md-grid-tile>
+</md-grid-list>

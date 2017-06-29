@@ -6,17 +6,32 @@ h3 {
 table {
   padding-bottom: 15px;
 }
+app-task {
+  width: 100% !important;
+}
 .mat-raised-button {
   background-color: darkblue;
+}
+/deep/ .mat-sidenav-container {
+  background-color: #B0BEC5;
+}
+/deep/ .mat-grid-tile .mat-figure {
+  justify-content: inherit !important;
+  align-items: left !important;
+  width: 100% !important;
 }
 .sidenav-container {
   position: fixed;
   width: 200px;
-  height: 92%;
-  margin-top: 75px;
+  height: 92.2%;
   border-right: 1px solid #000000;
   border-top: 1px solid #000000;
   background-color: #B0BEC5;
+}
+.main-container {
+  position: fixed;
+  height: 92.2%;
+  width: 100%;
 }
 .nav-list {
   padding-left: 15px;
