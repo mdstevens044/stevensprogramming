@@ -1,8 +1,12 @@
 <md-expansion-panel>
   <md-expansion-panel-header>
     hello world
+    <div class="task-options">
+      <a><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></a>
+      <a><i class="fa fa-trash fa-lg trash" aria-hidden="true"></i></a>
+    </div>
   </md-expansion-panel-header>
-  <md-panel-description>
+  <md-panel-description *ngIf="descriptionShow">
     test code
   </md-panel-description>
 </md-expansion-panel>

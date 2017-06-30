@@ -10,3 +10,9 @@
 /deep/ .mat-expansion-panel-body {
   background-color: #FFFFFF;
 }
+.task-options {
+  padding-left: 1510px;
+}
+.trash {
+  padding-left: 10px;
+}

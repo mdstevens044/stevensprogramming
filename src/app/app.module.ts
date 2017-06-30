@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { MdToolbarModule, MdInputModule, MdSidenavModule, MdListModule,
          MdDialogModule, MdButtonModule, MdGridListModule, MdExpansionModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterializeModule } from 'ng2-materialize';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './views/header/header.component';
@@ -42,7 +43,8 @@ import { TaskComponent } from './views/task/task.component';
     MdButtonModule,
     MdGridListModule,
     MdExpansionModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterializeModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
