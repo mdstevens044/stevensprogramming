@@ -1,9 +1,18 @@
-<md-toolbar class="mat-accent">
-  <span>Your Task Curator</span>
-  <span class="center">
-    <md-input-container class="full-width">
-      <input mdInput placeholder="Search">
-    </md-input-container>
-  </span>
-  <span>Username <br> Logout</span>
-</md-toolbar>
+<mz-navbar>
+  <mz-navbar-item-container [align]="'left'">
+    <mz-navbar-item>Your Task Curator</mz-navbar-item>
+  </mz-navbar-item-container>
+  <div class="center">
+  <mz-navbar-item-container>
+    <mz-navbar-item>
+      <mz-input-container class="col s12">
+        <input mz-input id="search-input" placeholder="Search" type="email">
+      </mz-input-container>
+    </mz-navbar-item>
+  </mz-navbar-item-container>
+  </div>
+  <mz-navbar-item-container [align]="'right'">
+    <mz-navbar-item><a>Username</a></mz-navbar-item>
+    <mz-navbar-item><a>Logout</a></mz-navbar-item>
+  </mz-navbar-item-container>
+</mz-navbar>

@@ -1,16 +1,6 @@
-md-toolbar {
-  height: 75px;
-}
 .center {
-  margin: auto auto;
+  padding-left: 825px;
 }
-.full-width {
-  width: 100%;
-  padding-top: 5px;
-}
-/deep/ .mat-input-placeholder {
-  color: #000000;
-}
-/deep/ .mat-input-underline {
-  border-color: #000000;
+.topSpace {
+  padding-top: 50px;
 }
