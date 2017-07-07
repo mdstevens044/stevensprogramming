@@ -20,8 +20,7 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "../node_modules/materialize-css/dist/css/materialize.css",
-        "../node_modules/mdi/css/materialdesignicons.css"
+        "../node_modules/materialize-css/dist/css/materialize.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.js",

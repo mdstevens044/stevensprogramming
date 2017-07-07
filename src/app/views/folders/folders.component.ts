@@ -1,14 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Folders } from './folders';
-import { FoldersService } from './services/folder.service';
-import { AddDialogsService } from './services/add-dialog.service';
-import { RemoveDialogsService } from './services/remove-dialog.service';
+import { FoldersService } from '../../services/folder.service';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './folders.component.html',
   styleUrls: ['./folders.component.css'],
-  providers: [FoldersService, AddDialogsService, RemoveDialogsService]
+  providers: [FoldersService]
 })
 
 export class FoldersComponent implements OnInit {
@@ -16,27 +14,31 @@ export class FoldersComponent implements OnInit {
   sidebars: Folders[];
   selectedFolders: Folders;
   sidebarId: String;
+  public folderValue: string;
 
-  constructor(private sidebarService: FoldersService, private addDialogsService: AddDialogsService,
-              private delDialogsService: RemoveDialogsService) { }
+  public modalOptions: Materialize.ModalOptions = {
+    dismissible: false,
+    opacity: .5,
+    inDuration: 300,
+    outDuration: 200,
+    startingTop: '100%',
+    endingTop: '10%'
+  };
 
-  openAddDialog() {
-    this.addDialogsService
-        .confirm()
-        .subscribe(res => this.createFolders(res));
-  }
+  constructor(private sidebarService: FoldersService) { }
 
-  openDelDialog(sidebarID: String) {
+  setDelID(sidebarID: String) {
     this.sidebarId = sidebarID;
-    this.delDialogsService
+    /*this.delDialogsService
       .confirm()
-      .subscribe(res => this.deleteFolders(res.toString()));
+      .subscribe(res => this.deleteFolders(res.toString()));*/
   }
 
   createFolders(folders) {
-    const folderName = JSON.parse('{ "name": ' + JSON.stringify(folders) + ' }');
+    const folderName = JSON.parse('{ "name": "' + folders + '" }');
     this.sidebarService.createFolders(folderName);
     this.addFolders(folderName);
+    this.folderValue = '';
   }
 
   ngOnInit() {
@@ -66,16 +68,14 @@ export class FoldersComponent implements OnInit {
     this.selectFolders(sidebar);
   }
 
-  deleteFolders(response: String) {
-    if (response === 'Yes') {
-      const idx = this.getIndexOfFolders(this.sidebarId);
-      if (idx !== -1) {
-        this.sidebars.splice(idx, 1);
-        this.selectFolders(null);
-      }
-      this.sidebarService.deleteFolders(this.sidebarId);
-      return this.sidebars;
+  deleteFolders() {
+    const idx = this.getIndexOfFolders(this.sidebarId);
+    if (idx !== -1) {
+      this.sidebars.splice(idx, 1);
+      this.selectFolders(null);
     }
+    this.sidebarService.deleteFolders(this.sidebarId);
+    return this.sidebars;
   }
 
   addFolders(sidebar: Folders) {

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import { Folders } from '../folders';
+import { Folders } from '../views/folders/folders';
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()

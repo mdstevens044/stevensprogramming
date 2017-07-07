@@ -10,8 +10,6 @@ import { MaterializeModule } from 'ng2-materialize';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './views/header/header.component';
 import { FoldersComponent } from './views/folders/folders.component';
-import { AddDialogComponent } from './views/folders/add-dialog.component';
-import { RemoveDialogComponent } from './views/folders/remove-dialog.component';
 import { TaskComponent } from './views/task/task.component';
 
 @NgModule({
@@ -19,17 +17,7 @@ import { TaskComponent } from './views/task/task.component';
     AppComponent,
     HeaderComponent,
     FoldersComponent,
-    AddDialogComponent,
-    RemoveDialogComponent,
     TaskComponent
-  ],
-  exports: [
-    AddDialogComponent,
-    RemoveDialogComponent
-  ],
-  entryComponents: [
-    AddDialogComponent,
-    RemoveDialogComponent
   ],
   imports: [
     BrowserModule,

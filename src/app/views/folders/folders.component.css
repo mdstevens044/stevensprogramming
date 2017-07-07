@@ -9,33 +9,62 @@ table {
 app-task {
   width: 100% !important;
 }
-.mat-raised-button {
-  background-color: darkblue;
+td {
+  padding-top: 0;
 }
-/deep/ .mat-sidenav-container {
-  background-color: #B0BEC5;
+/deep/ .modal {
+  width: 350px;
+  height: 300px !important;
 }
-/deep/ .mat-grid-tile .mat-figure {
-  justify-content: inherit !important;
-  align-items: left !important;
-  width: 100% !important;
+/deep/ .modal-content {
+  padding: 0 !important;
 }
-.sidenav-container {
-  position: fixed;
+/deep/ .side-nav {
+  top: 65px;
   width: 200px;
-  height: 92.2%;
-  border-right: 1px solid #000000;
-  border-top: 1px solid #000000;
-  background-color: #B0BEC5;
+}
+/deep/ .sidenav-header {
+  margin-bottom: 0 !important;
+}
+/deep/ .btn {
+  float: none !important;
+  margin: 6px 20px !important;
+}
+.modalHeader {
+  height: 50px;
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+  display: block;
+  margin-bottom: 45px;
+  padding-top: 5px;
+  background-color: teal;
+  color: #FFFFFF;
+}
+.modalContent {
+  padding: 10px 24px 0 24px !important;
+}
+.addBtns {
+  padding-bottom: 0 !important;
+}
+.header {
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
 }
 .main-container {
   position: fixed;
   height: 92.2%;
-  width: 100%;
+  padding-left: 300px;
 }
 .nav-list {
   padding-left: 15px;
 }
 .centerBtn {
-  padding-left: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.material-icons.teal600 {
+  color: teal;
 }
