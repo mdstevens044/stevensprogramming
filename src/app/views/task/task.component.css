@@ -1,18 +1,12 @@
-.mat-expansion-panel {
+mz-collapsible {
   width: 100% !important;
-  background-color: darkblue;
-  font-weight: bold;
 }
-.mat-expansion-panel-header-description {
-  color: #000000;
-  padding-top: 15px;
+/deep/ .collapsible {
+  margin-top: 0;
+  border: none;
 }
-/deep/ .mat-expansion-panel-body {
-  background-color: #FFFFFF;
-}
-.task-options {
-  padding-left: 1510px;
-}
-.trash {
-  padding-left: 10px;
+@media (min-width: 991px) {
+  main {
+    padding-left: 200px;
+  }
 }

@@ -1,12 +1,24 @@
-<md-expansion-panel>
-  <md-expansion-panel-header>
-    hello world
-    <div class="task-options">
-      <a><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i></a>
-      <a><i class="fa fa-trash fa-lg trash" aria-hidden="true"></i></a>
-    </div>
-  </md-expansion-panel-header>
-  <md-panel-description *ngIf="descriptionShow">
-    test code
-  </md-panel-description>
-</md-expansion-panel>
+<main>
+<mz-collapsible
+    [mode]="'expandable'"
+    [onClose]="closeFunctionCallback"
+    [onOpen]="openFunctionCallback"
+    [popout]="false">
+  <mz-collapsible-item>
+    <mz-collapsible-item-header>
+      First
+    </mz-collapsible-item-header>
+    <mz-collapsible-item-body>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </mz-collapsible-item-body>
+  </mz-collapsible-item>
+  <mz-collapsible-item>
+    <mz-collapsible-item-header>
+      First
+    </mz-collapsible-item-header>
+    <mz-collapsible-item-body>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </mz-collapsible-item-body>
+  </mz-collapsible-item>
+</mz-collapsible>
+</main>
