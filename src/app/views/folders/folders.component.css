@@ -12,6 +12,9 @@ app-task {
 td {
   padding-top: 0;
 }
+a {
+  cursor: pointer;
+}
 /deep/ .modal {
   width: 350px;
   height: 300px !important;
