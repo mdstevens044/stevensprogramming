@@ -9,7 +9,7 @@ import 'rxjs/add/operator/catch';
 
 import { Post } from './post';
 
-import { environment } from 'environments/environment';
+import { environment } from '../../../environments/environment';
 
 @Injectable()
 export class PostsService {
@@ -30,7 +30,8 @@ export class PostsService {
 
   }
 
-  getPost(slug): Observable<Post> {
+  getPost(parameters: { slug: any }): Observable<Post> {
+    const slug = parameters.slug;
 
     return this.http
       .get(this._wpBase + `posts?slug=${slug}`)

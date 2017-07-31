@@ -20,7 +20,7 @@ export class PostSingleComponent implements OnInit {
 
   getPost(slug) {
     this.postsService
-      .getPost(slug)
+      .getPost({slug: slug})
       .subscribe(res => {
         this.loaded = true;
         this.post = res[0];
