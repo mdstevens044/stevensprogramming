@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "stevensprogramming",
   "version": "0.2.0",
   "license": "MIT",
@@ -74,5 +75,71 @@
     "source-map-explorer": "^1.3.2",
     "tslint": "^3.15.1",
     "typescript": "~2.3.2"
+=======
+  "name": "your-task-curator",
+  "version": "0.0.0",
+  "engines": {
+    "node": "8.0.0"
+  },
+  "license": "MIT",
+  "scripts": {
+    "ng": "ng",
+    "start": "node server.js",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "postinstall": "ng build --env=prod"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^4.2.5",
+    "@angular/cli": "1.0.6",
+    "@angular/common": "^4.2.5",
+    "@angular/compiler": "^4.2.5",
+    "@angular/compiler-cli": "^4.2.5",
+    "@angular/core": "^4.2.5",
+    "@angular/forms": "^4.2.5",
+    "@angular/http": "^4.2.5",
+    "@angular/material": "^2.0.0-beta.7",
+    "@angular/platform-browser": "^4.2.5",
+    "@angular/platform-browser-dynamic": "^4.2.5",
+    "@angular/platform-server": "^4.2.5",
+    "@angular/router": "^4.2.5",
+    "@types/jquery": "^2.0.47",
+    "angular2-universal": "^2.1.0-rc.1",
+    "body-parser": "^1.17.2",
+    "core-js": "^2.4.1",
+    "express": "^4.15.3",
+    "jquery": "^3.2.1",
+    "material-design-icons": "^3.0.1",
+    "mdi": "^1.9.33",
+    "mongodb": "^2.2.29",
+    "ng2-materialize": "^1.4.2",
+    "node": "0.0.0",
+    "npm": "^5.0.4",
+    "preboot": "^5.0.0-rc.11",
+    "rxjs": "^5.4.1",
+    "typescript": "~2.2.0",
+    "zone.js": "^0.8.12"
+  },
+  "devDependencies": {
+    "@types/jasmine": "2.5.38",
+    "@types/jquery": "^2.0.47",
+    "@types/node": "^6.0.79",
+    "codelyzer": "~2.0.0",
+    "jasmine-core": "~2.5.2",
+    "jasmine-spec-reporter": "~3.2.0",
+    "karma": "~1.4.1",
+    "karma-chrome-launcher": "~2.1.1",
+    "karma-cli": "~1.0.1",
+    "karma-coverage-istanbul-reporter": "^0.2.0",
+    "karma-jasmine": "~1.1.0",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "protractor": "~5.1.0",
+    "ts-node": "~2.0.0",
+    "tslint": "~4.5.0",
+    "typescript": "~2.2.0"
+>>>>>>> 4c043cd088cbae25108d4d0ef04a73acab2f8093
   }
 }

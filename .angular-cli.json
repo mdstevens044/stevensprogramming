@@ -1,7 +1,11 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
+<<<<<<< HEAD
     "name": "test-app"
+=======
+    "name": "task-curator"
+>>>>>>> 4c043cd088cbae25108d4d0ef04a73acab2f8093
   },
   "apps": [
     {
@@ -19,9 +23,19 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+<<<<<<< HEAD
         "styles.css"
       ],
       "scripts": [],
+=======
+        "styles.css",
+        "../node_modules/materialize-css/dist/css/materialize.css"
+      ],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.js",
+        "../node_modules/materialize-css/dist/js/materialize.js"
+      ],
+>>>>>>> 4c043cd088cbae25108d4d0ef04a73acab2f8093
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

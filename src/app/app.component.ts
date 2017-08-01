@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 
@@ -26,3 +27,13 @@ export class AppComponent implements OnInit {
     this.router.navigate(['']);
   }
 }
+=======
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent { }
+>>>>>>> 4c043cd088cbae25108d4d0ef04a73acab2f8093

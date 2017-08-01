@@ -1,0 +1,73 @@
+h3 {
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 15px;
+}
+table {
+  padding-bottom: 15px;
+}
+app-task {
+  width: 100% !important;
+}
+td {
+  padding-top: 0;
+}
+a {
+  cursor: pointer;
+}
+/deep/ .modal {
+  width: 350px;
+  height: 300px !important;
+}
+/deep/ .modal-content {
+  padding: 0 !important;
+}
+/deep/ .side-nav {
+  top: 65px;
+  width: 200px;
+}
+/deep/ .sidenav-header {
+  margin-bottom: 0 !important;
+}
+/deep/ .btn {
+  float: none !important;
+  margin: 6px 20px !important;
+}
+.modalHeader {
+  height: 50px;
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+  display: block;
+  margin-bottom: 45px;
+  padding-top: 5px;
+  background-color: teal;
+  color: #FFFFFF;
+}
+.modalContent {
+  padding: 10px 24px 0 24px !important;
+}
+.addBtns {
+  padding-bottom: 0 !important;
+}
+.header {
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+}
+.main-container {
+  position: fixed;
+  height: 92.2%;
+  padding-left: 300px;
+}
+.nav-list {
+  padding-left: 15px;
+}
+.centerBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.material-icons.teal600 {
+  color: teal;
+}

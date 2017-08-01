@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "body-parser": "registry:dt/body-parser#1.16.0+20170321201455",
+    "express": "registry:dt/express#4.0.0+20170118060322",
+    "express-serve-static-core": "registry:dt/express-serve-static-core#4.0.0+20170324160323",
+    "serve-static": "registry:dt/serve-static#1.7.1+20161128184045"
+  }
+}

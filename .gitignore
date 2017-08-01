@@ -40,3 +40,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+<<<<<<< HEAD
+=======
+.idea
+>>>>>>> 4c043cd088cbae25108d4d0ef04a73acab2f8093
