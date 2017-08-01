@@ -5,7 +5,7 @@
       <md-card-title>{{ transform(post.title.rendered, 0) }}</md-card-title>
       <md-card-subtitle>{{ transform(post.title.rendered, 1) }}</md-card-subtitle>
     </md-card-header>
-    <img class="centerImg" md-card-lg-image src="{{ post.better_featured_image?.media_details.sizes.medium_large.source_url }}" />
+    <img class="centerImg" src="{{ post.better_featured_image?.media_details.sizes.medium_large.source_url }}" />
     <md-card-content [innerHTML]="post.content.rendered"></md-card-content>
   </div>
 </md-card>

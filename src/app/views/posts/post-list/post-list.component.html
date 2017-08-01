@@ -1,14 +1,14 @@
 <md-spinner *ngIf="!loaded"></md-spinner>
 
-<md-card *ngFor="let post of posts">
+<md-card *ngFor="let post of data | async | select: post">
   <div class="pages">
     <md-card-header>
       <img md-card-avatar src="assets/penguin.jpg" />
-      <md-card-title>{{ transform(post.title.rendered, 0) }}</md-card-title>
-      <md-card-subtitle>{{ transform(post.title.rendered, 1) }}</md-card-subtitle>
+      <md-card-title>{{ transform(post.title, 0) }}</md-card-title>
+      <md-card-subtitle>{{ transform(post.title, 1) }}</md-card-subtitle>
     </md-card-header>
-    <img class="centerImg" md-card-lg-image src="{{ post.better_featured_image?.media_details.sizes.medium_large.source_url }}" />
-    <md-card-content [innerHTML]="post.excerpt.rendered"></md-card-content>
+    <img class="centerImg" src="{{ post.sourceUrl }}" />
+    <md-card-content [innerHTML]="post.excerpt"></md-card-content>
     <md-card-actions>
       <button (click)="selectPost(post.slug)" md-raised-button color="primary">Read</button>
     </md-card-actions>
