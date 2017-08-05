@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-<<<<<<< HEAD
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 html {
   font-family: sans-serif;
@@ -46,14 +45,4 @@ body {
   .pages p {
     font-size: large;
   }
-=======
-@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
-html {
-  margin: auto auto;
-  height: 100%;
-}
-body {
-  margin: auto auto;
-  height: 100%;
->>>>>>> 4c043cd088cbae25108d4d0ef04a73acab2f8093
 }

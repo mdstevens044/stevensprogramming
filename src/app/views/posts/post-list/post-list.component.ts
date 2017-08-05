@@ -1,32 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
-import { Apollo, ApolloQueryObservable } from 'apollo-angular';
-import gql from 'graphql-tag';
 
 import { Post } from '../post';
 import { PostsService } from '../posts.service';
-
-const PostList = gql`
-  query PostList {
-    posts {
-      edges {
-        node {
-          title
-          slug
-          excerpt
-          featuredImage {
-            sourceUrl
-          }
-        }
-      }
-    }
-  }
-`;
-
-interface QueryResponse {
-  posts;
-  loading;
-}
 
 @Component({
   selector: 'app-post-list',
@@ -37,12 +13,11 @@ interface QueryResponse {
 
 export class PostListComponent implements OnInit {
 
-  posts: any;
+  posts: Post[];
   error: string;
   loading: boolean;
-  data: ApolloQueryObservable<any>;
 
-  constructor( private postsService: PostsService, private router: Router, private apollo: Apollo ) { }
+  constructor( private postsService: PostsService, private router: Router ) { }
 
   getPosts() {
     this.postsService
@@ -58,8 +33,7 @@ export class PostListComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.getPosts();
-    this.data = this.apollo.watchQuery({ query: PostList });
+    this.getPosts();
   }
 
   selectPost(slug) {

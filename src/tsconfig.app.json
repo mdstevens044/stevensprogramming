@@ -4,13 +4,9 @@
     "outDir": "../out-tsc/app",
     "module": "es2015",
     "baseUrl": "",
-<<<<<<< HEAD
     "types": [
       "isomorphic-fetch"
     ]
-=======
-    "types": []
->>>>>>> 4c043cd088cbae25108d4d0ef04a73acab2f8093
   },
   "exclude": [
     "test.ts",
