@@ -1,6 +1,6 @@
 <mat-spinner *ngIf="!loaded"></mat-spinner>
 
-<mat-card *ngFor="let post of data | async | select: post">
+<mat-card *ngFor="let post of data | async">
   <div class="pages">
     <mat-card-header>
       <img mat-card-avatar src="assets/penguin.jpg" />
