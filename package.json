@@ -43,6 +43,7 @@
     "open": "0.0.5",
     "request": "^2.87.0",
     "rxjs": "^6.2.1",
+    "rxjs-compat": "^6.2.2",
     "timespan": "^2.3.0",
     "tunnel-agent": "^0.6.0",
     "zone.js": "^0.8.26"
