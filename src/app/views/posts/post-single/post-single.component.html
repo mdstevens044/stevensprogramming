@@ -1,15 +1,15 @@
-<md-card *ngIf="post">
+<mat-card *ngIf="post">
   <div class="pages">
-    <md-card-header>
-      <img md-card-avatar src="assets/penguin.jpg" />
-      <md-card-title>{{ transform(post.title.rendered, 0) }}</md-card-title>
-      <md-card-subtitle>{{ transform(post.title.rendered, 1) }}</md-card-subtitle>
-    </md-card-header>
+    <mat-card-header>
+      <img mat-card-avatar src="assets/penguin.jpg" />
+      <mat-card-title>{{ transform(post.title.rendered, 0) }}</mat-card-title>
+      <mat-card-subtitle>{{ transform(post.title.rendered, 1) }}</mat-card-subtitle>
+    </mat-card-header>
     <img class="centerImg" src="{{ post.better_featured_image?.media_details.sizes.medium_large.source_url }}" />
-    <md-card-content [innerHTML]="post.content.rendered"></md-card-content>
+    <mat-card-content [innerHTML]="post.content.rendered"></mat-card-content>
   </div>
-</md-card>
+</mat-card>
 
-<md-spinner *ngIf="!post"></md-spinner>
+<mat-spinner *ngIf="!post"></mat-spinner>
 
 <footer-generic></footer-generic>

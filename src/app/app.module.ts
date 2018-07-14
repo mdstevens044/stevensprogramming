@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdTabsModule, MdButtonModule, MdCardModule, MdToolbarModule, MdProgressSpinnerModule } from '@angular/material';
+import { MatTabsModule, MatButtonModule, MatCardModule, MatToolbarModule, MatProgressSpinnerModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
@@ -24,11 +24,11 @@ import 'hammerjs';
     HttpModule,
     FormsModule,
     BrowserAnimationsModule,
-    MdTabsModule,
-    MdButtonModule,
-    MdCardModule,
-    MdToolbarModule,
-    MdProgressSpinnerModule
+    MatTabsModule,
+    MatButtonModule,
+    MatCardModule,
+    MatToolbarModule,
+    MatProgressSpinnerModule
   ],
   declarations: [
     AppComponent,

@@ -2,17 +2,17 @@ div {
   width: 80%;
   margin: auto;
 }
-md-spinner {
+mat-spinner {
   display: block;
   width: 50px;
   height: 50px;
   margin: 80px auto 100px;
 }
-md-card-title {
+mat-card-title {
   font-weight: bold;
   font-size: 20px !important;
 }
-md-card-subtitle {
+mat-card-subtitle {
   font-size: 16px !important;
 }
 .readMe {

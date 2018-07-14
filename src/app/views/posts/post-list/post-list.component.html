@@ -1,18 +1,18 @@
-<md-spinner *ngIf="!loaded"></md-spinner>
+<mat-spinner *ngIf="!loaded"></mat-spinner>
 
-<md-card *ngFor="let post of data | async | select: post">
+<mat-card *ngFor="let post of data | async | select: post">
   <div class="pages">
-    <md-card-header>
-      <img md-card-avatar src="assets/penguin.jpg" />
-      <md-card-title>{{ transform(post.title, 0) }}</md-card-title>
-      <md-card-subtitle>{{ transform(post.title, 1) }}</md-card-subtitle>
-    </md-card-header>
+    <mat-card-header>
+      <img mat-card-avatar src="assets/penguin.jpg" />
+      <mat-card-title>{{ transform(post.title, 0) }}</mat-card-title>
+      <mat-card-subtitle>{{ transform(post.title, 1) }}</mat-card-subtitle>
+    </mat-card-header>
     <img class="centerImg" src="{{ post.sourceUrl }}" />
-    <md-card-content [innerHTML]="post.excerpt"></md-card-content>
-    <md-card-actions>
-      <button (click)="selectPost(post.slug)" md-raised-button color="primary">Read</button>
-    </md-card-actions>
+    <mat-card-content [innerHTML]="post.excerpt"></mat-card-content>
+    <mat-card-actions>
+      <button (click)="selectPost(post.slug)" mat-raised-button color="primary">Read</button>
+    </mat-card-actions>
   </div>
-</md-card>
+</mat-card>
 
 <footer-generic></footer-generic>

@@ -1,10 +1,10 @@
-<md-toolbar color="primary">
+<mat-toolbar color="primary">
   <span>Stevens Programming</span>
   <span class="spacer"></span>
-</md-toolbar>
+</mat-toolbar>
 
-<nav md-tab-nav-bar>
-  <a md-tab-link
+<nav mat-tab-nav-bar>
+  <a mat-tab-link
      *ngFor="let routeLink of routeLinks; let i = index"
      [routerLink]="routeLink.link"
      routerLinkActive="active"
