@@ -27,6 +27,7 @@
     "@angular/router": "^6.0.9",
     "@angular/tsc-wrapped": "^4.4.6",
     "@angular/upgrade": "^6.0.9",
+    "@ng-bootstrap/ng-bootstrap": "^2.2.0",
     "@types/isomorphic-fetch": "0.0.34",
     "boom": "^7.2.0",
     "browser-sync": "^2.24.5",
