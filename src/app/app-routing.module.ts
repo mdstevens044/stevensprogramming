@@ -22,7 +22,7 @@ const routes: Routes = [
     component: ProjectsComponent
   },
   {
-    path: 'github',
+    path: 'code',
     component: GithubComponent
   },
   {

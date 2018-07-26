@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatTabsModule, MatButtonModule, MatCardModule, MatToolbarModule, MatProgressSpinnerModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -29,8 +28,7 @@ import 'hammerjs';
     MatButtonModule,
     MatCardModule,
     MatToolbarModule,
-    MatProgressSpinnerModule,
-    NgbModule.forRoot()
+    MatProgressSpinnerModule
   ],
   declarations: [
     AppComponent,

@@ -1,8 +1,146 @@
-a:link, a:visited, a:hover, a:active {
-  text-decoration: none !important;
-}
-.container {
+.content {
   width: 100%;
-  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  max-height: 100vh;
+  transition: all 0.3s;
+}
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+#sidebar {
+  min-width: 80px;
+  max-width: 80px;
+  background: #31424B;
+  color: #FFFFFF;
+  z-index: 10;
+}
+
+#sidebar.active .sidebar-header strong {
+  display: block;
+}
+
+#sidebar .sidebar-nav {
+  position: absolute;
+  top: 33%;
+}
+
+#sidebar ul li a {
+  text-align: center;
+  padding: 5px 15px;
+  display: block;
+  color: #FFFFFF;
+}
+
+#sidebar.active ul li a {
+  text-align: center;
+}
+
+#sidebar.active ul li a i {
+  margin-right: 0;
+  display: block;
+  margin-bottom: 5px;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: #31424B;
+  text-align: center;
+}
+
+#sidebar .sidebar-header strong {
+  font-size: 1.8em;
+}
+
+#sidebar ul li a:hover {
+  color: #31424B;
+  background: #FFFFFF;
+  margin-bottom: 20px;
+  width: 80px;
+}
+
+#sidebar ul li a i {
+  margin-right: 10px;
+  color: #FFFFFF;
+}
+
+#sidebar ul li.active > a {
+  color: #FFFFFF;
+  background: #31424B;
+  margin-bottom: 15px;
+  width: 80px;
+}
+
+#sidebar ul li.active a:hover {
+  color: #FFFFFF;
+  background: #31424B;
+}
+
+#sidebar .navText {
+  visibility: hidden;
+}
+
+#sidebar li.active .navText {
+  visibility: visible;
+}
+
+#sidebar li:not(.active) a:hover .navText {
+  visibility: visible;
+  padding-top: 5px;
+}
+
+ul ul a {
+  padding-left: 30px !important;
+  background: #31424B;
+}
+
+#sidebar .list-unstyled {
+  list-style: none;
   padding: 0;
+  margin: 0;
+}
+
+.navbar {
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: .25rem .25rem;
+  }
+
+  #sidebar {
+    margin-left: -80px;
+    transition: 1s;
+  }
+
+  #sidebar.active {
+    margin-left: 0;
+    transition: 1s;
+  }
+
+  .btn-dark {
+    background-color: #31424B;
+    border-color: #FFFFFF;
+  }
+
+  .btn-dark:focus, .btn-dark:active {
+    outline: none;
+    box-shadow: none;
+  }
 }

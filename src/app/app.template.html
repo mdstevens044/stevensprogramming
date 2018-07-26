@@ -1,19 +1,28 @@
-<mat-toolbar color="primary">
-  <span>Stevens Programming</span>
-  <span class="spacer"></span>
-</mat-toolbar>
+<div class="wrapper">
+  <nav id="sidebar" [ngClass]="{ 'active': navbarOpen }">
+    <div class="sidebar-header">
+      <strong>MS</strong>
+    </div>
 
-<nav mat-tab-nav-bar>
-  <a mat-tab-link
-     *ngFor="let routeLink of routeLinks; let i = index"
-     [routerLink]="routeLink.link"
-     routerLinkActive="active"
-     (click)="activeLinkIndex = i + 1"
-     [active]="activeLinkIndex === i + 1">
-    {{routeLink.label}}
-  </a>
-</nav>
+    <div class="sidebar-nav">
+      <ul class="list-unstyled">
+        <li *ngFor="let routerLink of routerLinks; let i = index" routerLinkActive="active"  [routerLinkActiveOptions]="{ exact: true }" (click)="toggleNavbar()">
+          <a [routerLink]="routerLink.link">
+            <div [innerHTML]="navIcons[i]"></div>
+            <div class="navText">{{ routerLink.label }}</div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-<div class="container">
-  <router-outlet></router-outlet>
+  <div class="content">
+    <nav class="navbar navbar-expand-lg">
+        <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" (click)="toggleNavbar()">
+          <i class="fas fa-align-justify"></i>
+        </button>
+    </nav>
+
+    <router-outlet></router-outlet>
+  </div>
 </div>
