@@ -20,15 +20,19 @@ a:focus {
 
 .wrapper {
   display: flex;
-  align-items: stretch;
+  width: 100%;
 }
 
 #sidebar {
-  min-width: 80px;
-  max-width: 80px;
+  width: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
   background: #31424B;
   color: #FFFFFF;
   z-index: 10;
+  transition: all 0.3s;
 }
 
 #sidebar.active .sidebar-header strong {
