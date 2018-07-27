@@ -7,13 +7,12 @@ p {
 @media screen and (min-width: 810px) {
   .banner {
     background: url("../../../assets/jumbotron.png") repeat center;
+    background-size: 100% 100%;
     position: fixed;
-    top: 113px;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    max-width: 100%;
-    max-height: 100%;
     margin: auto;
     overflow: auto;
   }
@@ -33,16 +32,24 @@ p {
   .banner {
     background: url("../../../assets/jumbotron.png") repeat center;
     background-size: 100% 100%;
-    min-height: 555px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
   .jumbotron-text {
     position: fixed;
-    bottom: 90px;
-    right: 10px;
+    bottom: 50px;
+    right: 15px;
     text-align: right;
     color: #FFFFFF;
   }
   h1 {
+    font-size: 2rem;
     margin-bottom: 0;
+  }
+  p {
+    font-size: 1.12rem;
   }
 }
