@@ -16,13 +16,13 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent
-  },
+  },/*
   {
     path: 'projects',
     component: ProjectsComponent
-  },
+  },*/
   {
-    path: 'code',
+    path: 'github',
     component: GithubComponent
   },
   {
