@@ -1,52 +1,28 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 
-import 'rxjs/add/observable/throw';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
-
 import { environment } from 'environments/environment';
-import {Github} from './github';
+import { Github } from './github';
 
 @Injectable()
 export class GithubService {
 
   private ghUserName = environment.ghUserName;
 
-  constructor(private http: Http) { }
+  constructor(private httpClient: HttpClient) { }
 
   getProjects(): Observable<Github[]> {
-    return this.http
-      .get('https://api.github.com/users/' + this.ghUserName + '/repos')
-      .map((res: Response) => res.json())
-      .catch((err: Response | any) => {
-        console.error(err);
-        return Observable.throw(err);
-      });
-
+    return this.httpClient.get<Github[]>('https://api.github.com/users/' + this.ghUserName + '/repos');
   }
 
   getLanguages(repo): Observable<Github[]> {
-    return this.http
-      .get('https://api.github.com/repos/' + this.ghUserName + '/' + repo + '/languages')
-      .map((res: Response) => res.json())
-      .catch((err: Response | any) => {
-        console.error(err);
-        return Observable.throw(err);
-      });
-
+    return this.httpClient.get<Github[]>('https://api.github.com/repos/' + this.ghUserName + '/' + repo + '/languages');
   }
 
-  getReadMe(repo): Observable<String> {
-    return this.http
-      .get('https://raw.githubusercontent.com/' + this.ghUserName + '/' + repo + '/master/README.md')
-      .map((res: Response) => res.text())
-      .catch((err: Response | any) => {
-        console.error(err);
-        return Observable.throw(err);
-      });
-
+  getReadMe(repo) {
+    const url = 'https://raw.githubusercontent.com/' + this.ghUserName + '/' + repo + '/master/README.md';
+    return this.httpClient.get(url, {responseType: 'text'});
   }
 
 }
