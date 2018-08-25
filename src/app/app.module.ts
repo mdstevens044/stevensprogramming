@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ApolloBoostModule } from 'apollo-angular-boost';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule, MatButtonModule, MatCardModule, MatToolbarModule, MatProgressSpinnerModule } from '@angular/material';
 
@@ -22,6 +23,7 @@ import 'hammerjs';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ApolloBoostModule,
     FormsModule,
     BrowserAnimationsModule,
     MatTabsModule,
