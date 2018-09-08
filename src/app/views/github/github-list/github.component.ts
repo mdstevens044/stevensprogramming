@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Apollo, gql } from 'apollo-angular-boost';
-
-import { Github } from '../github';
 import { GithubService } from '../github.service';
 
 @Component({
