@@ -1,18 +1,15 @@
-<mat-spinner *ngIf="!loaded"></mat-spinner>
+<mat-spinner *ngIf="loading"></mat-spinner>
 
-<mat-card *ngFor="let project of projects; let i = index">
-  {{ getLanguages(project.name) }}
-  {{ getReadMe(project.name) }}
-  <div>
-    <mat-card-header>
-      <img mat-card-avatar src="assets/penguin.jpg" />
-      <mat-card-title>{{ project.name }}</mat-card-title>
-      <mat-card-subtitle>{{ project.description }}</mat-card-subtitle>
-      <mat-card-subtitle>{{ languages[i] }}</mat-card-subtitle>
-      <mat-card-subtitle class="readMe">README.md</mat-card-subtitle>
-      <mat-card-subtitle [innerHTML]="readMe[i]"></mat-card-subtitle>
-    </mat-card-header>
+<div class="pages">
+  <div class="container" *ngFor="let repository of repositories">
+    <div><img class="avatar" src="assets/penguin.jpg" /></div>
+    <div class="main-text">
+      <div class="title">{{ repository.node.name }}</div>
+      <div class="description">{{ repository.node.description }}</div>
+      <div class="language" *ngFor="let language of repository.node.languages.edges">{{ language.node.name }} &nbsp;</div>
+      <div class="clear"></div>
+    </div>
   </div>
-</mat-card>
+</div>
 
 <footer-generic></footer-generic>

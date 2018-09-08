@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Apollo, gql } from 'apollo-angular-boost';
 
 import { Github } from '../github';
 import { GithubService } from '../github.service';
@@ -13,48 +14,13 @@ import { GithubService } from '../github.service';
 
 export class GithubComponent implements OnInit {
 
-  projects: Github[];
-  languages = [];
   error: string;
-  loaded: boolean;
-  repoNamesLang = [];
   repoNamesRead = [];
   readMe = [];
+  repositories: any[];
+  loading: boolean;
 
-  constructor( private gitService: GithubService, private router: Router ) { }
-
-  getProjects() {
-    this.gitService
-      .getProjects()
-      .subscribe(res => {
-        // success
-        this.loaded = true;
-        this.projects = res;
-      }, err => {
-        // error
-        this.error = err;
-      });
-  }
-
-  getLanguages(repo) {
-    if (!this.repoNamesLang.includes(repo)) {
-      this.gitService
-        .getLanguages(repo)
-        .subscribe(res => {
-          // success
-          const split = Object.keys(res).toString().split(',');
-          let lang = '';
-          for (let i = 0; i < split.length; i++) {
-            lang += split[i] + ' ';
-          }
-          this.languages.push(lang);
-        }, err => {
-          // error
-          this.error = err;
-        });
-      this.repoNamesLang.push(repo);
-    }
-  }
+  constructor( private gitService: GithubService, private router: Router, private apollo: Apollo ) { }
 
   getReadMe(repo) {
     if (!this.repoNamesRead.includes(repo)) {
@@ -80,7 +46,38 @@ export class GithubComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getProjects();
+    this.apollo
+      .watchQuery({
+        query: gql`
+          {
+            viewer {
+              repositories(first: 30) {
+                edges {
+                  node {
+                    name
+                    description
+                    url
+                    languages(first: 30, orderBy: {field: SIZE, direction: DESC}) {
+                      edges {
+                        node {
+                          name
+                          color
+                        }
+                        size
+                      }
+                      totalSize
+                    }
+                  }
+                }
+              }
+            }
+          }
+        `,
+      })
+      .valueChanges.subscribe(result => {
+      // @ts-ignore
+      this.repositories = result.data && result.data.viewer.repositories.edges;
+      this.loading = result.loading;
+    });
   }
-
 }

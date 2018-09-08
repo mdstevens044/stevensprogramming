@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { ApolloBoostModule } from 'apollo-angular-boost';
+import { ApolloBoostModule, ApolloBoost } from 'apollo-angular-boost';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule, MatButtonModule, MatCardModule, MatToolbarModule, MatProgressSpinnerModule } from '@angular/material';
 
@@ -15,6 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { PostListComponent } from './views/posts/post-list/post-list.component';
 import { PostSingleComponent } from './views/posts/post-single/post-single.component';
 import { GithubComponent } from './views/github/github-list/github.component';
+import { environment } from 'environments/environment';
 
 import 'hammerjs';
 
@@ -47,4 +48,10 @@ import 'hammerjs';
     AppComponent
   ]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(boost: ApolloBoost) {
+    boost.create({
+      uri: environment.ghEndPoint
+    })
+  }
+}
