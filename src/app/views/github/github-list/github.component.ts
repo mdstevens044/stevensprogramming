@@ -1,47 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Apollo, gql } from 'apollo-angular-boost';
-import { GithubService } from '../github.service';
 
 @Component({
   selector: 'app-github',
   templateUrl: './github.component.html',
-  styleUrls: ['./github.component.css'],
-  providers: [GithubService]
+  styleUrls: ['./github.component.css']
 })
 
 export class GithubComponent implements OnInit {
 
   error: string;
-  repoNamesRead = [];
-  readMe = [];
   repositories: any[];
   loading: boolean;
 
-  constructor( private gitService: GithubService, private router: Router, private apollo: Apollo ) { }
-
-  getReadMe(repo) {
-    if (!this.repoNamesRead.includes(repo)) {
-      this.gitService
-        .getReadMe(repo)
-        .subscribe(res => {
-          // success
-          const read = [];
-          let str = res.toString().replace(/##/g, '');
-          str = str.replace(/#/g, '');
-          read.push(str);
-          for (let i = 0; i < read.length; i++) {
-            if (read[i] !== ' ') {
-              this.readMe.push(read[i]);
-            }
-          }
-        }, err => {
-          // error
-          this.error = err;
-        });
-      this.repoNamesRead.push(repo);
-    }
-  }
+  constructor( private apollo: Apollo ) { }
 
   ngOnInit() {
     this.apollo
