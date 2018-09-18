@@ -14,7 +14,7 @@ import { ProjectsComponent } from './views/projects/projects.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PostListComponent } from './views/posts/post-list/post-list.component';
 import { PostSingleComponent } from './views/posts/post-single/post-single.component';
-import { GithubComponent } from './views/github/github-list/github.component';
+import { GithubComponent } from './views/github/github.component';
 import { environment } from 'environments/environment';
 
 import 'hammerjs';
