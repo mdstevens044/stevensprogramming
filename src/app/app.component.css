@@ -62,7 +62,7 @@ a:focus {
 }
 
 #sidebar .sidebar-header {
-  padding: 20px;
+  padding: 20px 0;
   background: #31424B;
   text-align: center;
 }
