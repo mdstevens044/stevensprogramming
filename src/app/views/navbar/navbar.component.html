@@ -1,0 +1,22 @@
+<nav id="sidebar" [ngClass]="{ 'active': navbarOpen }">
+  <div class="sidebar-header">
+    <img src="../assets/logo.png" alt="Logo" height="80" width="80">
+  </div>
+
+  <div class="sidebar-nav">
+    <ul class="list-unstyled">
+      <li *ngFor="let routerLink of routerLinks; let i = index" routerLinkActive="active"  [routerLinkActiveOptions]="{ exact: true }" (click)="toggleNavbar()">
+        <a [routerLink]="routerLink.link">
+          <div [innerHTML]="navIcons[i]"></div>
+          <div class="navText">{{ routerLink.label }}</div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg">
+  <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" (click)="toggleNavbar()">
+    <i class="fas fa-align-justify"></i>
+  </button>
+</nav>
