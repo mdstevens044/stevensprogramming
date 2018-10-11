@@ -1,14 +1,13 @@
 <mat-spinner *ngIf="!loading"></mat-spinner>
 
-<mat-card *ngFor="let post of posts | async">
+<mat-card *ngFor="let post of posts">
   <div class="pages">
     <mat-card-header>
       <img mat-card-avatar src="assets/penguin.jpg" />
-      <mat-card-title>{{ transform(post.title, 0) }}</mat-card-title>
-      <mat-card-subtitle>{{ transform(post.title, 1) }}</mat-card-subtitle>
+      <mat-card-title>{{ post.title.rendered }}</mat-card-title>
     </mat-card-header>
     <img class="centerImg" src="{{ post.sourceUrl }}" />
-    <mat-card-content [innerHTML]="post.excerpt"></mat-card-content>
+    <mat-card-content [innerHTML]="post.excerpt.rendered"></mat-card-content>
     <mat-card-actions>
       <button (click)="selectPost(post.slug)" mat-raised-button color="primary">Read</button>
     </mat-card-actions>
