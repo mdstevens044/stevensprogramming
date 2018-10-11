@@ -54,7 +54,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.6.8",
-    "@angular/cli": "^6.1.1",
+    "@angular/cli": "^6.2.4",
     "@types/angular": "^1.6.48",
     "@types/angular-animate": "^1.5.10",
     "@types/angular-cookies": "^1.4.5",
