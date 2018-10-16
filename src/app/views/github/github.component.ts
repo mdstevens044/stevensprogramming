@@ -10,14 +10,14 @@ import { Apollo, gql } from 'apollo-angular-boost';
 export class GithubComponent implements OnInit {
 
   error: string;
-  repositories: any[];
-  loading: boolean;
+  repositories: any;
+  loading = true;
 
   constructor( private apollo: Apollo ) { }
 
   ngOnInit() {
     this.apollo
-      .watchQuery({
+      .watchQuery<any>({
         query: gql`
           {
             viewer {
@@ -44,10 +44,9 @@ export class GithubComponent implements OnInit {
           }
         `,
       })
-      .valueChanges.subscribe(result => {
-      // @ts-ignore
-      this.repositories = result.data && result.data.viewer.repositories.edges;
-      this.loading = result.loading;
+      .valueChanges.subscribe(({ data, loading }) => {
+      this.loading = loading;
+      this.repositories = data.viewer.repositories.edges;
     });
   }
 }
