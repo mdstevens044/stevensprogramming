@@ -60,5 +60,9 @@ export class AppModule {
       link: httpLink.create({ uri: environment.ghEndPoint }),
       cache: new InMemoryCache()
     });
+    apollo.create({
+      link: httpLink.create({ uri: environment.graphCms }),
+      cache: new InMemoryCache()
+    }, 'graphCms');
   }
 }
