@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Apollo, gql } from 'apollo-angular-boost';
+import { Apollo } from 'apollo-angular';
+import gql from 'graphql-tag';
 
 @Component({
   selector: 'app-github',

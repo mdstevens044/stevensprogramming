@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { ApolloBoostModule, ApolloBoost } from 'apollo-angular-boost';
+import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
+import { InMemoryCache } from 'apollo-cache-inmemory';
+import { ApolloModule, Apollo } from 'apollo-angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule, MatButtonModule, MatCardModule, MatToolbarModule, MatProgressSpinnerModule } from '@angular/material';
 
@@ -25,7 +27,9 @@ import 'hammerjs';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ApolloBoostModule,
+    HttpClientModule,
+    HttpLinkModule,
+    ApolloModule,
     FormsModule,
     BrowserAnimationsModule,
     MatTabsModule,
@@ -51,9 +55,10 @@ import 'hammerjs';
   ]
 })
 export class AppModule {
-  constructor(boost: ApolloBoost) {
-    boost.create({
-      uri: environment.ghEndPoint
-    })
+  constructor(apollo: Apollo, httpLink: HttpLink) {
+    apollo.create({
+      link: httpLink.create({ uri: environment.ghEndPoint }),
+      cache: new InMemoryCache()
+    });
   }
 }
