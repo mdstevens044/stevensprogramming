@@ -1,16 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@font-face {
+  font-family: Calibre;
+  font-weight: 300;
+  font-display: optional;
+  src:url("/assets/fonts/CalibreWeb-Regular.eot?#iefix") format("embedded-opentype"),
+      url("/assets/fonts/CalibreWeb-Regular.woff2") format("woff2"),
+      url("/assets/fonts/CalibreWeb-Regular.woff") format("woff");
+}
 html {
-  font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
 body {
+  font-family: Calibre, helvetica, sans-serif;
+  font-size: 14px;
   background-color: #FFFFFF;
   color: #333333;
   margin: 0;
-  font-size: 14px !important;
-  font-family: "Helvetica Neue", Arial, sans-serif;
 }
 .pages {
   position: relative;
