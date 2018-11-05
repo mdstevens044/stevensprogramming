@@ -7,7 +7,6 @@
   left: 0;
   right: 0;
   margin: auto;
-  overflow: auto;
 }
 .jumbotron-text {
   position: fixed;
@@ -25,9 +24,6 @@ p {
   margin-bottom: 15px;
   font-size: 21px;
   font-weight: 200;
-}
-body {
-  overflow-y: hidden;
 }
 @media screen and (max-width: 810px) {
   .banner {
