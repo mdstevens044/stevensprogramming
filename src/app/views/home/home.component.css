@@ -1,35 +1,37 @@
+.banner {
+  background: url("../../../assets/jumbotron.png") repeat center;
+  background-size: auto;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: auto;
+}
+.jumbotron-text {
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  text-align: right;
+  color: #FFFFFF;
+}
+h1 {
+  font-size: 63px;
+  margin-bottom: 0;
+}
 p {
   margin-top: 0;
   margin-bottom: 15px;
   font-size: 21px;
   font-weight: 200;
 }
-@media screen and (min-width: 810px) {
-  .banner {
-    background: url("https://res.cloudinary.com/dfru0twma/image/upload/f_auto,q_auto/v1539824592/stevensprogramming/jumbotron.png") repeat center;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    overflow: auto;
-  }
-  .jumbotron-text {
-    position: fixed;
-    bottom: 100px;
-    right: 100px;
-    text-align: right;
-    color: #FFFFFF;
-  }
-  h1 {
-    font-size: 63px;
-    margin-bottom: 0;
-  }
+body {
+  overflow-y: hidden;
 }
 @media screen and (max-width: 810px) {
   .banner {
-    background: url("https://res.cloudinary.com/dfru0twma/image/upload/f_auto,q_auto/v1539824592/stevensprogramming/jumbotron.png") repeat center;
+    background: url("../../../assets/jumbotron.png") repeat center;
     background-size: 100% 100%;
     position: fixed;
     top: 0;
