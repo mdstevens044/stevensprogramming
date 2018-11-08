@@ -45,7 +45,10 @@ body {
 }
 @media screen and (max-width: 810px) {
   .pages {
-    width: 100vw;
+    width: 100%;
+    padding-right: 5px;
+    padding-bottom: 20px;
+    padding-left: 5px;
   }
   .pages h1 {
     text-align: center;

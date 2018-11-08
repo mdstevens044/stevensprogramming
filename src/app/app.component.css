@@ -21,3 +21,10 @@ a:focus {
   display: flex;
   width: 100%;
 }
+
+@media screen and (max-width: 810px) {
+  .content {
+    width: 100vw;
+    padding: 20px 15px 20px 15px;
+  }
+}
