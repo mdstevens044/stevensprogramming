@@ -1,9 +1,6 @@
 <div class="pages">
   <h1>About</h1>
-  <p>Hello! My name is Michael Stevens. I am from Bethany, NC and currently live in Raleigh, NC.</p>
-  <p>I have an Associates of Applied Science in Computer Programming from Wake Technical Community College. I am currently attending North Carolina Wesleyan College for my Bachelor of
-  Business Administration in Computer Information System's with a concentration in Web Development and a minor in Business Administration. Apart from taking college courses I also have
-  taken courses on the popular MOOC website Coursera. Through Coursera I have obtained many verified certificates ranging from Software Development to Web Development.</p>
+  <p *ngFor="let about of abouts" [innerHTML]="replaceLineBreaks(about.about)"></p>
 </div>
 
 <footer-generic></footer-generic>
