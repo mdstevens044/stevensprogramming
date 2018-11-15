@@ -69,6 +69,7 @@
 #sidebar ul li.active a:hover {
   color: #FFFFFF;
   background: #31424B;
+  cursor: default;
 }
 
 #sidebar .navText {
