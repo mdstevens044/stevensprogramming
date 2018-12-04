@@ -41,7 +41,13 @@ button {
   margin-left: -30px;
 }
 @media screen and (max-width: 810px) {
-.centerImg {
+  .pages {
+    width: 100%;
+    padding-right: 5px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+  }
+  .centerImg {
     margin: auto;
     display: block;
     padding-bottom: 20px;
