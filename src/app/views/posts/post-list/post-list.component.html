@@ -1,17 +1,16 @@
 <mat-spinner *ngIf="loading"></mat-spinner>
 
-<mat-card *ngFor="let post of posts">
-  <div class="pages">
-    <mat-card-header>
-      <img mat-card-avatar src="assets/penguin.jpg" />
-      <mat-card-title>{{ post.title }}</mat-card-title>
-    </mat-card-header>
-    <img class="centerImg" src="{{ post.coverImage.url }}" />
-    <mat-card-content [innerHTML]="post.excerpt"></mat-card-content>
-    <mat-card-actions>
-      <button (click)="selectPost(post.slug)" mat-raised-button color="primary">Read</button>
-    </mat-card-actions>
+<div class="pages">
+  <div class="container" *ngFor="let post of posts">
+    <div><img class="avatar" src="assets/penguin.jpg" /></div>
+    <div class="main-text">
+      <div class="title">{{ post.title }}</div>
+      <div><img class="centerImg" src="{{ post.coverImage.url }}" /></div>
+      <div class="excerpt"><p [innerHTML]="post.excerpt"></p></div>
+      <div><button (click)="selectPost(post.slug)" mat-raised-button color="primary">Read</button></div>
+      <div class="clear"></div>
+    </div>
   </div>
-</mat-card>
+</div>
 
 <footer-generic></footer-generic>

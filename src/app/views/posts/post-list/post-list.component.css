@@ -1,3 +1,6 @@
+.pages {
+  width: 1080px;
+}
 .centerImg {
   margin: auto;
   display: block;
@@ -5,25 +8,37 @@
   width: 600px;
   height: auto;
 }
-div {
-  width: 80%;
-  margin: auto;
+.container {
+  display: flex;
+  flex-direction: row;
+  margin: 40px auto;
+  padding: 24px;
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+  border-bottom: none;
 }
-mat-spinner {
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+.container:not([class*=mat-elevation-z]) {
+  box-shadow: 0 1px 1px -2px rgba(0, 0, 0, .16),
+  0 1px 1px 0 rgba(0, 0, 0, .14),
+  0 1px 1px 0 rgba(0, 0, 0, .12);
 }
-mat-card-title {
-  font-weight: bold;
-  font-size: 20px !important;
-  margin-bottom: 6px !important;
+.avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
 }
-mat-card-subtitle {
-  font-size: 16px !important;
+.main-text {
+  margin: 0 8px;
+}
+.title {
+  font-weight: 700;
+  font-size: 20px;
+}
+.excerpt p {
+  font-size: 16px;
+  margin-left: -30px;
+}
+button {
+  margin-left: -30px;
 }
 @media screen and (max-width: 810px) {
 .centerImg {
@@ -32,5 +47,16 @@ mat-card-subtitle {
     padding-bottom: 20px;
     width: 100%;
     height: auto;
+  }
+  .container {
+    width: 83vw;
+    padding: 15px;
+    margin: 0 0 30px 0;
+  }
+  .title {
+    font-size: 16px;
+  }
+  .excerpt {
+    font-size: 14px;
   }
 }
