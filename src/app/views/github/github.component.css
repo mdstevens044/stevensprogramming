@@ -38,14 +38,6 @@
   color: #333333;
   margin-bottom: 10px;
 }
-mat-spinner {
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
 
 @media screen and (max-width: 810px) {
   .container {

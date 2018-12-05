@@ -6,7 +6,6 @@ import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { ApolloModule, Apollo } from 'apollo-angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatTabsModule, MatButtonModule, MatCardModule, MatToolbarModule, MatProgressSpinnerModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './views/navbar/navbar.component';
@@ -31,12 +30,7 @@ import 'hammerjs';
     HttpLinkModule,
     ApolloModule,
     FormsModule,
-    BrowserAnimationsModule,
-    MatTabsModule,
-    MatButtonModule,
-    MatCardModule,
-    MatToolbarModule,
-    MatProgressSpinnerModule
+    BrowserAnimationsModule
   ],
   declarations: [
     AppComponent,

@@ -14,8 +14,6 @@ import gql from 'graphql-tag';
 export class PostListComponent implements OnInit {
 
   posts: any;
-  error: string;
-  loading = true;
 
   constructor( private router: Router, private apollo: Apollo ) { }
 
@@ -39,7 +37,6 @@ export class PostListComponent implements OnInit {
         `
       })
       .valueChanges.subscribe(({ data, loading }) => {
-      this.loading = loading;
       this.posts = data.posts;
     });
   }

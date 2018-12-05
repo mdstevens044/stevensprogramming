@@ -10,9 +10,7 @@ import gql from 'graphql-tag';
 
 export class GithubComponent implements OnInit {
 
-  error: string;
   repositories: any;
-  loading = true;
 
   constructor( private apollo: Apollo ) { }
 
@@ -46,7 +44,6 @@ export class GithubComponent implements OnInit {
         `,
       })
       .valueChanges.subscribe(({ data, loading }) => {
-      this.loading = loading;
       this.repositories = data.viewer.repositories.edges;
     });
   }

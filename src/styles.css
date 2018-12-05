@@ -40,9 +40,6 @@ body {
 .pages p {
   font-size: larger;
 }
-.mat-card {
-  border-bottom: none;
-}
 @media screen and (max-width: 810px) {
   .pages {
     width: 100%;
