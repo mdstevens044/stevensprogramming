@@ -40,8 +40,8 @@ export class PostSingleComponent implements OnInit {
           }
         })
         .valueChanges.subscribe(({ data, loading }) => {
-        this.post = data.posts[0];
-      });
+          this.post = data.posts[0];
+        });
     });
   }
 }
