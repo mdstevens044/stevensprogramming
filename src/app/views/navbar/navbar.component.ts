@@ -16,7 +16,7 @@ export class NavbarComponent implements OnInit {
     this.routerLinks = [
       {label: 'Home', link: ''},
       {label: 'About', link: 'about'},
-      {label: 'Projects', link: 'github'},
+      {label: 'Github', link: 'github'},
       {label: 'Blog', link: 'blog'}
     ];
 
