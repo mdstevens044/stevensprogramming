@@ -32,7 +32,5 @@ export class NavbarComponent implements OnInit {
     this.navbarOpen = !this.navbarOpen;
   }
 
-  ngOnInit() {
-    this.router.navigate(['']);
-  }
+  ngOnInit() { }
 }
