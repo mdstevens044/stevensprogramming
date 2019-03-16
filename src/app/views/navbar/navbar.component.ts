@@ -17,14 +17,16 @@ export class NavbarComponent implements OnInit {
       {label: 'Home', link: ''},
       {label: 'About', link: 'about'},
       {label: 'Github', link: 'github'},
-      {label: 'Blog', link: 'blog'}
+      {label: 'Blog', link: 'blog'},
+      {label: 'Contact', link: 'contact'}
     ];
 
     this.navIcons = [
       '<i class="fas fa-home fa-lg"></i>',
       '<i class="fas fa-user fa-lg"></i>',
       '<i class="fas fa-code fa-lg"></i>',
-      '<i class="fab fa-blogger-b fa-lg"></i>'
+      '<i class="fab fa-blogger-b fa-lg"></i>',
+      '<i class="fas fa-envelope fa-lg"></i>'
     ];
   }
 

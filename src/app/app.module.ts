@@ -17,6 +17,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { PostListComponent } from './views/posts/post-list/post-list.component';
 import { PostSingleComponent } from './views/posts/post-single/post-single.component';
 import { GithubComponent } from './views/github/github.component';
+import { ContactComponent } from './views/contact/contact.component';
 import { environment } from 'environments/environment';
 
 import 'hammerjs';
@@ -41,7 +42,8 @@ import 'hammerjs';
     ProjectsComponent,
     PostListComponent,
     PostSingleComponent,
-    GithubComponent
+    GithubComponent,
+    ContactComponent
   ],
   providers: [],
   bootstrap: [

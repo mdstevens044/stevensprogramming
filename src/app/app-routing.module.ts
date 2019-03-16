@@ -1,4 +1,4 @@
-import { NgModule }             from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './views/home/home.component';
@@ -7,6 +7,7 @@ import { ProjectsComponent } from './views/projects/projects.component';
 import { PostListComponent } from './views/posts/post-list/post-list.component';
 import { PostSingleComponent } from './views/posts/post-single/post-single.component';
 import { GithubComponent } from './views/github/github.component';
+import { ContactComponent } from './views/contact/contact.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: 'blog',
     component: PostListComponent
+  },
+  {
+    path: 'contact',
+    component: ContactComponent
   },
   {
     path: ':slug',
