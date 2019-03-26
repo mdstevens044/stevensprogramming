@@ -5,7 +5,7 @@
     <div class="main-text">
       <div class="title">{{ post.title }}</div>
       <div><img class="centerImg" src="{{ post.coverImage.url }}" /></div>
-      <div class="excerpt"><p [innerHTML]="post.excerpt"></p></div>
+      <div class="excerpt"><p>{{ post.excerpt }}</p></div>
       <div><button (click)="selectPost(post.slug)" class="raised-button">Read</button></div>
       <div class="clear"></div>
     </div>

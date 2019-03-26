@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Apollo } from 'apollo-angular';
 
 import gql from 'graphql-tag';
+import 'rxjs-compat/add/operator/map';
 
 @Component({
   selector: 'app-post-single',
@@ -39,8 +40,9 @@ export class PostSingleComponent implements OnInit {
             slug: params['slug']
           }
         })
-        .valueChanges.subscribe(({ data, loading }) => {
-          this.post = data.posts[0];
+        .valueChanges.map((result: any) => result.data.posts[0])
+        .subscribe(data => {
+          this.post = data;
         });
     });
   }

@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Apollo } from 'apollo-angular';
 
 import gql from 'graphql-tag';
+import 'rxjs-compat/add/operator/map';
 
 @Component({
   selector: 'app-post-list',
@@ -36,8 +37,9 @@ export class PostListComponent implements OnInit {
           }
         `
       })
-      .valueChanges.subscribe(({ data, loading }) => {
-      this.posts = data.posts;
+      .valueChanges.map((result: any) => result.data.posts)
+      .subscribe(data => {
+        this.posts = data;
     });
   }
 

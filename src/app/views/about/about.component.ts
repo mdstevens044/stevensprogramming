@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import { Apollo } from 'apollo-angular';
+
 import gql from 'graphql-tag';
+import 'rxjs-compat/add/operator/map';
 
 @Component({
   selector: 'app-about',
@@ -9,7 +11,6 @@ import gql from 'graphql-tag';
 
 export class AboutComponent implements OnInit {
   abouts: any;
-  loading = true;
 
   constructor( private apollo: Apollo ) { }
 
@@ -26,9 +27,9 @@ export class AboutComponent implements OnInit {
           }
         `
       })
-      .valueChanges.subscribe(({ data, loading }) => {
-      this.loading = loading;
-      this.abouts = data.abouts;
+      .valueChanges.map((result: any) => result.data.abouts)
+      .subscribe(data => {
+        this.abouts = data;
     });
   }
 

@@ -4,7 +4,7 @@
     <div class="main-text">
       <div class="title">{{ post.title }}</div>
       <div><img class="centerImg" src="{{ post.coverImage.url }}" /></div>
-      <div class="post-content"><p [innerHTML]="post.content"></p></div>
+      <div class="post-content"><p>{{ post.content }}</p></div>
       <div><button [routerLink]="['/blog']" class="raised-button">Back</button></div>
       <div class="clear"></div>
     </div>
