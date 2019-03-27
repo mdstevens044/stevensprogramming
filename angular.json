@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "test-app": {
+    "stevens-programming": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -48,18 +48,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "test-app:build"
+            "browserTarget": "stevens-programming:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "test-app:build:production"
+              "browserTarget": "stevens-programming:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "test-app:build"
+            "browserTarget": "stevens-programming:build"
           }
         },
         "test": {
@@ -91,7 +91,7 @@
         }
       }
     },
-    "test-app-e2e": {
+    "stevens-programming-e2e": {
       "root": "",
       "sourceRoot": "e2e",
       "projectType": "application",
@@ -100,7 +100,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "test-app:serve"
+            "devServerTarget": "stevens-programming:serve"
           }
         },
         "lint": {
@@ -115,7 +115,7 @@
       }
     }
   },
-  "defaultProject": "test-app",
+  "defaultProject": "stevens-programming",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",

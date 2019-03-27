@@ -1,14 +1,14 @@
-import { TestAppPage } from './app.po';
+import { StevensProgrammingPage } from './app.po';
 
-describe('test-app App', () => {
-  let page: TestAppPage;
+describe('stevens-programming App', () => {
+  let page: StevensProgrammingPage;
 
   beforeEach(() => {
-    page = new TestAppPage();
+    page = new StevensProgrammingPage();
   });
 
   it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect<any>(page.getParagraphText()).toEqual('app works!');
   });
 });
