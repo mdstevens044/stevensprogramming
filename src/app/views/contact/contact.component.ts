@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Apollo } from 'apollo-angular';
-
-import gql from 'graphql-tag';
-import 'rxjs-compat/add/operator/map';
+import { Contact } from './contact';
+import { ContactService } from './service/contact.service';
+import { environment } from 'environments/environment';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -11,27 +11,31 @@ import 'rxjs-compat/add/operator/map';
 })
 
 export class ContactComponent implements OnInit {
-  contacts: any;
+  contacts = new Contact();
+  recaptchaKey = environment.recaptchaSiteKey;
+  emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/g;
+  emailInvalid = false;
+  error: {};
 
-  constructor( private apollo: Apollo ) { }
+  constructor( private router: Router, private contactService: ContactService ) { }
 
-  ngOnInit() {
-    this.apollo
-      .use('graphCms')
-      .watchQuery<any>({
-        query: gql`
-          {
-            contacts
-            {
-              contactForm
-            }
-          }
-        `
-      })
-      .valueChanges.map((result: any) => result.data.contacts)
-      .subscribe(data => {
-        this.contacts = data;
-      });
+  ngOnInit() { }
+
+  processForm()
+  {
+    this.contactService.contactForm(this.contacts).subscribe(
+      data => this.contacts = data,
+      error => this.error = error
+    );
+
+    // if(this.error === undefined)
+    // {
+      this.router.navigate(['/sent']);
+    // }
   }
 
+  checkPattern()
+  {
+    this.emailInvalid = !this.emailPattern.test(this.contacts.contactEmail);
+  }
 }

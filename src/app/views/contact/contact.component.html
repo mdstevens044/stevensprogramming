@@ -1,7 +1,62 @@
 <div class="pages">
   <h1>Contact Me</h1>
-  <p *ngFor="let contact of contacts">{{ contact.contactForm }}</p>
+  <p>If you are looking for a web developer to help create your website, please feel free to reach out by completing the
+     form below. I will get back with you within 1-2 days.</p>
 
+  <div class="contact-form">
+    <form (ngSubmit)="processForm()" #contactForm="ngForm" autocomplete="off">
+      <div class="text-field">
+        <label for="contactName">Name <span class="required-field">*</span></label>
+        <input type="text" class="input-text" id="contactName" name="contactName" autocomplete="!off" required [(ngModel)]="contacts.contactName" #name="ngModel">
+
+        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error">
+          <div *ngIf="name.errors.required">
+            Name is required.
+          </div>
+        </div>
+      </div>
+      <div class="text-field">
+        <label for="contactEmail">Email Address <span class="required-field">*</span></label>
+        <input type="email" class="input-text" id="contactEmail" name="contactEmail" autocomplete="!off" required (change)="checkPattern()" [(ngModel)]="contacts.contactEmail" #email="ngModel">
+
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error">
+          <div *ngIf="email.errors.required">
+            Email is required.
+          </div>
+        </div>
+        <div *ngIf="emailInvalid" class="error">
+          <div>
+            Email not valid.
+          </div>
+        </div>
+      </div>
+      <div class="text-field">
+        <label for="contactSubject">Subject <span class="required-field">*</span></label>
+        <input type="text" class="input-text" id="contactSubject" name="contactSubject" autocomplete="!off" required [(ngModel)]="contacts.contactSubject" #subject="ngModel">
+
+        <div *ngIf="subject.invalid && (subject.dirty || subject.touched)" class="error">
+          <div *ngIf="subject.errors.required">
+            Subject is required.
+          </div>
+        </div>
+      </div>
+      <div class="text-field">
+        <label for="contactMessage">Message <span class="required-field">*</span></label>
+        <textarea class="input-textarea" id="contactMessage" name="contactMessage" [(ngModel)]="contacts.contactMessage" required #message="ngModel"></textarea>
+
+        <div *ngIf="message.invalid && (message.dirty || message.touched)" class="error">
+          <div *ngIf="message.errors.required">
+            Message is required.
+          </div>
+        </div>
+      </div>
+      <div class="re-captcha">
+        <re-captcha [(ngModel)]="contacts.contactRecaptcha" name="contactRecaptcha" siteKey="{{ recaptchaKey }}" required></re-captcha>
+      </div>
+
+      <button [disabled]="!contactForm.form.valid || emailInvalid" class="raised-button">Submit</button>
+    </form>
+  </div>
 </div>
 
 <app-footer></app-footer>

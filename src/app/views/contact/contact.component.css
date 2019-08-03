@@ -1,3 +1,67 @@
 p {
   text-align: center;
 }
+input, textarea, label {
+  display: block;
+  text-align: left;
+}
+label {
+  margin-bottom: 0.25em;
+}
+re-captcha {
+  display: block;
+  margin: 0 auto;
+}
+.error {
+  color: #FF0000;
+  margin-top: 0.15em;
+}
+.pages {
+  text-align: center;
+}
+.contact-form {
+  display: inline-block;
+  margin: 1.75em auto;
+}
+.input-text {
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  width: 25em;
+  height: calc(1em + .5em + 2px);
+  font-size: 1rem;
+  border: 1px solid #CED4DA;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.input-textarea {
+  -webkit-appearance: textfield;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  font-size: 1rem;
+  resize: none;
+  width: 25em;
+  height: 8.5em;
+  border: 1px solid #CED4DA;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.input-text:focus, .input-textarea:focus {
+  color: #495057;
+  background-color: #FFFFFF;
+  border-color: #80BDFF;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+.text-field {
+  margin-bottom: 1em;
+}
+.re-captcha {
+  width: 100%;
+  display: inline-flex;
+}
+.required-field {
+  color: #FF0000;
+}
+.raised-button {
+  margin-top: 2em;
+}

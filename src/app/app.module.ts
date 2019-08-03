@@ -6,6 +6,8 @@ import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { ApolloModule, Apollo } from 'apollo-angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RecaptchaModule } from 'ng-recaptcha';
+import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './views/navbar/navbar.component';
@@ -18,6 +20,7 @@ import { PostListComponent } from './views/posts/post-list/post-list.component';
 import { PostSingleComponent } from './views/posts/post-single/post-single.component';
 import { GithubComponent } from './views/github/github.component';
 import { ContactComponent } from './views/contact/contact.component';
+import { SentComponent } from './views/contact/sent/sent.component';
 import { environment } from 'environments/environment';
 
 import 'hammerjs';
@@ -31,7 +34,9 @@ import 'hammerjs';
     HttpLinkModule,
     ApolloModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RecaptchaModule,
+    RecaptchaFormsModule
   ],
   declarations: [
     AppComponent,
@@ -43,7 +48,8 @@ import 'hammerjs';
     PostListComponent,
     PostSingleComponent,
     GithubComponent,
-    ContactComponent
+    ContactComponent,
+    SentComponent
   ],
   providers: [],
   bootstrap: [

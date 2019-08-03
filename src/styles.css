@@ -47,7 +47,6 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  cursor: pointer;
   outline: 0;
   border: none;
   -webkit-tap-highlight-color: transparent;
@@ -69,10 +68,11 @@ body {
   0 2px 2px 0 rgba(0,0,0,.14),
   0 1px 5px 0 rgba(0,0,0,.12);
 }
-.raised-button:hover {
+.raised-button:not([disabled]):hover {
   transform:scale(1.15, 1.15);
   -webkit-transform:scale(1.15, 1.15);
   -moz-transform:scale(1.15, 1.15);
+  cursor: pointer;
 }
 @media screen and (max-width: 810px) {
   .pages {
