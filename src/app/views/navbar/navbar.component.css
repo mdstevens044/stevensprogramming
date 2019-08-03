@@ -49,9 +49,13 @@
 
 #sidebar ul li a:hover {
   color: #31424B;
-  background: #FFFFFF;
+  background-image: url("../../../assets/circles-light.png");
   margin-bottom: 20px;
   width: 80px;
+}
+
+#sidebar li:not(.active) a:hover {
+  margin-top: 20px;
 }
 
 #sidebar ul li a i {
@@ -60,30 +64,22 @@
 }
 
 #sidebar ul li.active > a {
-  color: #FFFFFF;
-  background: #31424B;
+  color: #31424B;
+  background-image: url("../../../assets/circles-light.png");
   margin-bottom: 15px;
   width: 80px;
 }
 
-#sidebar ul li.active a:hover {
+/*#sidebar ul li.active a:hover {
   color: #FFFFFF;
   background: #31424B;
   cursor: default;
-}
+}*/
 
-#sidebar .navText {
-  visibility: hidden;
-}
-
-#sidebar li.active .navText {
-  visibility: visible;
-}
-
-#sidebar li:not(.active) a:hover .navText {
+/*#sidebar li:not(.active) a:hover {
   visibility: visible;
   padding-top: 5px;
-}
+}*/
 
 ul ul a {
   padding-left: 30px !important;

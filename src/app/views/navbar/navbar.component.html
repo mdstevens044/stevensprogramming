@@ -8,7 +8,7 @@
       <li *ngFor="let routerLink of routerLinks; let i = index" routerLinkActive="active"  [routerLinkActiveOptions]="{ exact: true }" (click)="toggleNavbar()">
         <a [routerLink]="routerLink.link">
           <div [innerHTML]="navIcons[i]"></div>
-          <div class="navText">{{ routerLink.label }}</div>
+          <div>{{ routerLink.label }}</div>
         </a>
       </li>
     </ul>
