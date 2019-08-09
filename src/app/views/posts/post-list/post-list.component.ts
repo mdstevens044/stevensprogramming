@@ -15,6 +15,7 @@ import 'rxjs-compat/add/operator/map';
 export class PostListComponent implements OnInit {
 
   posts: any;
+  postExist = false;
 
   constructor( private router: Router, private apollo: Apollo ) { }
 
@@ -24,7 +25,7 @@ export class PostListComponent implements OnInit {
       .watchQuery<any>({
         query: gql`
           {
-            posts(orderBy: createdAt_ASC)
+            posts(where: {status: PUBLISHED}, orderBy:createdAt_DESC)
             {
               createdAt,
               title,
@@ -40,6 +41,7 @@ export class PostListComponent implements OnInit {
       .valueChanges.map((result: any) => result.data.posts)
       .subscribe(data => {
         this.posts = data;
+        if(Object.keys(data).length !== 0) { this.postExist = true; }
     });
   }
 

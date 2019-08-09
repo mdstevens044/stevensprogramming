@@ -23,7 +23,7 @@
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-
+*.code-workspace
 # misc
 /.sass-cache
 /connect.lock
@@ -44,3 +44,4 @@ Thumbs.db
 # environments
 /src/environments/environment.ts
 /src/environments/environment.prod.ts
+.vscode/settings.json

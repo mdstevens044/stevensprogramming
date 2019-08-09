@@ -1,13 +1,22 @@
 <div class="pages">
   <h1>Blog</h1>
-  <div class="container" *ngFor="let post of posts">
-    <div><img class="avatar" src="assets/penguin.jpg" /></div>
-    <div class="main-text">
-      <div class="title">{{ post.title }}</div>
-      <div><img class="centerImg" src="{{ post.coverImage.url }}" /></div>
-      <div class="excerpt"><p>{{ post.excerpt }}</p></div>
-      <div><button (click)="selectPost(post.slug)" class="raised-button">Read</button></div>
-      <div class="clear"></div>
+  <div *ngIf="!postExist">
+    <div class="container">
+      <div class="main-text">
+        <div class="title">No Blog Post Exist</div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="postExist">
+    <div class="container" *ngFor="let post of posts">
+      <div><img class="avatar" src="assets/penguin.jpg" /></div>
+      <div class="main-text">
+        <div class="title">{{ post.title }}</div>
+        <div><img class="centerImg" src="{{ post.coverImage.url }}" /></div>
+        <div class="excerpt"><p>{{ post.excerpt }}</p></div>
+        <div><button (click)="selectPost(post.slug)" class="raised-button">Read</button></div>
+        <div class="clear"></div>
+      </div>
     </div>
   </div>
 </div>
