@@ -66,7 +66,6 @@
 #sidebar ul li.active > a {
   color: #31424B;
   background-image: url("../../../assets/circles-light.png");
-  margin-bottom: 15px;
   width: 80px;
 }
 
