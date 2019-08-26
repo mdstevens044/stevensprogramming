@@ -7,7 +7,7 @@
   background: #31424B;
   color: #FFFFFF;
   z-index: 10;
-  transition: all 0.3s;
+  /* transition: all 0.3s; */
 }
 
 #sidebar.active .sidebar-header strong {
@@ -50,13 +50,13 @@
 #sidebar ul li a:hover {
   color: #31424B;
   background-image: url("../../../assets/circles-light.png");
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   width: 80px;
 }
 
-#sidebar li:not(.active) a:hover {
+/* #sidebar li:not(.active) a:hover {
   margin-top: 20px;
-}
+} */
 
 #sidebar ul li a i {
   margin-right: 10px;
@@ -95,12 +95,12 @@ ul ul a {
 @media (max-width: 768px) {
   #sidebar {
     margin-left: -80px;
-    transition: 1s;
+    /* transition: 1s; */
   }
 
   #sidebar.active {
     margin-left: 0;
-    transition: 1s;
+    /* transition: 1s; */
   }
 
   .navbar {
@@ -170,7 +170,7 @@ ul ul a {
     font-size: 1rem;
     line-height: 1.5;
     border-radius: 0.25rem;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; 
   }
 
   .btn-dark {
