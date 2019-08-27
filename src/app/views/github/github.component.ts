@@ -22,7 +22,7 @@ export class GithubComponent implements OnInit {
         query: gql`
           {
             viewer {
-              repositories(first: 30, orderBy: {field: PUSHED_AT, direction: DESC}) {
+              repositories(first: 30, orderBy: {field: PUSHED_AT, direction: DESC}, privacy: PUBLIC) {
                 edges {
                   node {
                     name
