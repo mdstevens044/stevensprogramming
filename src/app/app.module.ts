@@ -22,6 +22,7 @@ import { GithubComponent } from './views/github/github.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { SentComponent } from './views/contact/sent/sent.component';
 import { environment } from 'environments/environment';
+import { ReplaceLineBreaksPipe } from './pipes/replace-line-breaks.pipe';
 
 import 'hammerjs';
 
@@ -49,12 +50,14 @@ import 'hammerjs';
     PostSingleComponent,
     GithubComponent,
     ContactComponent,
-    SentComponent
+    SentComponent,
+    ReplaceLineBreaksPipe
   ],
   providers: [],
   bootstrap: [
     AppComponent
-  ]
+  ],
+  exports: [ReplaceLineBreaksPipe]
 })
 export class AppModule {
   constructor(apollo: Apollo, httpLink: HttpLink) {

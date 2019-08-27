@@ -33,9 +33,4 @@ export class AboutComponent implements OnInit {
         this.abouts = data;
     });
   }
-
-  replaceLineBreaks(replaceStr: string)
-  {
-    return replaceStr.replace(new RegExp('\r?\n','g'), '<br>');
-  }
 }

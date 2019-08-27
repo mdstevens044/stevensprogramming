@@ -1,6 +1,6 @@
 <div class="pages">
   <h1>About</h1>
-  <p *ngFor="let about of abouts" [innerHTML]="replaceLineBreaks(about.about)"></p>
+  <p *ngFor="let about of abouts" [innerHTML]="about.about | replaceLineBreaks"></p>
 </div>
 
 <app-footer></app-footer>
