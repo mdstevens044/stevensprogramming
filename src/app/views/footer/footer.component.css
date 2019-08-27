@@ -1,19 +1,6 @@
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  height: 35px;
   width: 100%;
-  z-index: 9;
-  padding-top: 5px;
-  padding-bottom: 3px;
   text-align: center;
   background-image: url("/assets/circles-light.png");
   color: #333333;
 }
-
-/*@media screen and (max-width: 810px) {
-  footer {
-    position: relative;
-  }
-}*/
