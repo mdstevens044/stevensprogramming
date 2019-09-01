@@ -20,7 +20,6 @@ import { PostListComponent } from './views/posts/post-list/post-list.component';
 import { PostSingleComponent } from './views/posts/post-single/post-single.component';
 import { GithubComponent } from './views/github/github.component';
 import { ContactComponent } from './views/contact/contact.component';
-import { SentComponent } from './views/contact/sent/sent.component';
 import { environment } from 'environments/environment';
 import { ReplaceLineBreaksPipe } from './pipes/replace-line-breaks.pipe';
 
@@ -50,7 +49,6 @@ import 'hammerjs';
     PostSingleComponent,
     GithubComponent,
     ContactComponent,
-    SentComponent,
     ReplaceLineBreaksPipe
   ],
   providers: [],
