@@ -8,7 +8,6 @@ import { PostListComponent } from './views/posts/post-list/post-list.component';
 import { PostSingleComponent } from './views/posts/post-single/post-single.component';
 import { GithubComponent } from './views/github/github.component';
 import { ContactComponent } from './views/contact/contact.component';
-import { SentComponent } from './views/contact/sent/sent.component';
 
 const routes: Routes = [
   {
@@ -34,10 +33,6 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent
-  },
-  {
-    path: 'sent',
-    component: SentComponent
   },
   {
     path: ':slug',
