@@ -1,5 +1,6 @@
 .pages {
   width: 1080px;
+  min-height: 47em;
 }
 .centerImg {
   margin: auto;
