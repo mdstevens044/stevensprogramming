@@ -4,22 +4,17 @@
   font-family: 'Noto Sans';
   font-style: normal;
   font-weight: 400;
-  src: url('/assets/fonts/noto-sans-v7-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local('Noto Sans'), local('NotoSans'),
-  url('/assets/fonts/noto-sans-v7-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('/assets/fonts/noto-sans-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-  url('/assets/fonts/noto-sans-v7-latin-regular.woff') format('woff'), /* Modern Browsers */
-  url('/assets/fonts/noto-sans-v7-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-  url('/assets/fonts/noto-sans-v7-latin-regular.svg#NotoSans') format('svg'); /* Legacy iOS */
+  src: local('Noto Sans'), url('/assets/fonts/noto-sans-v7-latin-regular.ttf') format('truetype'); 
+  font-display:  block;
 }
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
 body {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Noto Sans', Arial, sans-serif;
   font-size: 16px;
-  background-image: url("/assets/circles-light.png");
+  background-image: url("/assets/circles-light.webp");
   color: #333333;
   margin: 0;
 }
