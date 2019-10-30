@@ -6,8 +6,6 @@ import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { ApolloModule, Apollo } from 'apollo-angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RecaptchaModule } from 'ng-recaptcha';
-import { RecaptchaFormsModule } from 'ng-recaptcha/forms';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './views/navbar/navbar.component';
@@ -34,9 +32,7 @@ import 'hammerjs';
     HttpLinkModule,
     ApolloModule,
     FormsModule,
-    BrowserAnimationsModule,
-    RecaptchaModule,
-    RecaptchaFormsModule
+    BrowserAnimationsModule
   ],
   declarations: [
     AppComponent,
