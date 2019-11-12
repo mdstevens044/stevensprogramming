@@ -5,5 +5,6 @@ export const environment = {
   wpBase: 'https://stevensprogramming.com/blog/wp-json/wp/v2/',
   graphCms: 'https://api-useast.graphcms.com/v1/cjnb3itxs1g0v01ghlqpw9o5a/master',
   recaptchaSiteKey: '6LceN5oUAAAAANc5n7pAog1xLTfAOI-2K8eyQ9zP',
-  emailApi: 'https://api.stevensprogramming.com/api/email/send'
+  emailApi: 'https://api.stevensprogramming.com/api/email/send',
+  butterCMS: '46b838c9b2003c691dabc1763d040f351841aed1'
 };

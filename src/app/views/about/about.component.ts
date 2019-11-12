@@ -1,8 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import { Apollo } from 'apollo-angular';
 
-import gql from 'graphql-tag';
-import 'rxjs-compat/add/operator/map';
+import { environment } from 'environments/environment';
+import * as Butter from 'buttercms';
 
 @Component({
   selector: 'app-about',
@@ -11,26 +10,15 @@ import 'rxjs-compat/add/operator/map';
 })
 
 export class AboutComponent implements OnInit {
-  abouts: any;
+  about: any;
+  butterService = Butter(environment.butterCMS);
 
-  constructor( private apollo: Apollo ) { }
+  constructor() { }
 
   ngOnInit() {
-    this.apollo
-      .use('graphCms')
-      .watchQuery<any>({
-        query: gql`
-          {
-            abouts
-            {
-              about
-            }
-          }
-        `
-      })
-      .valueChanges.map((result: any) => result.data.abouts)
-      .subscribe(data => {
-        this.abouts = data;
-    });
+    this.butterService.page.retrieve('*', 'about')
+      .then((res) => {
+          this.about = res.data.data.fields.about;
+      });
   }
 }
