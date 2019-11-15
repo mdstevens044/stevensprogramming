@@ -1,7 +1,7 @@
 <div class="pages">
   <h1>GitHub</h1>
   <div class="container" *ngFor="let repository of repositories">
-    <div><img class="avatar" src="assets/penguin.webp" /></div>
+    <div><img class="avatar" srcset="assets/penguin.webp, assets/penguin.png" src="assets/penguin.webp" /></div>
     <div class="main-text">
       <div class="title">{{ repository.node.name }}</div>
       <div class="description">{{ repository.node.description }}</div>

@@ -50,7 +50,7 @@
 
 #sidebar ul li a:hover {
   color: #31424B;
-  background-image: url("../../../assets/circles-light.webp");
+  background-image: url("../../../assets/circles-light.webp"), url("../../../assets/circles-light.png");
   /* margin-bottom: 20px; */
   width: 80px;
 }
@@ -66,7 +66,7 @@
 
 #sidebar ul li.active > a {
   color: #31424B;
-  background-image: url("../../../assets/circles-light.webp");
+  background-image: url("../../../assets/circles-light.webp"), url("../../../assets/circles-light.png");
   width: 80px;
 }
 
