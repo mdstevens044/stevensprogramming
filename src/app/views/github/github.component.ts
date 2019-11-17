@@ -13,6 +13,7 @@ import 'rxjs-compat/add/operator/map';
 export class GithubComponent implements OnInit {
 
   repositories: any;
+  loaded = false;
 
   constructor( private apollo: Apollo ) { }
 
@@ -47,6 +48,7 @@ export class GithubComponent implements OnInit {
       })
       .valueChanges.map((result: any) => result.data.viewer.repositories.edges)
       .subscribe( data => {
+        this.loaded = true;
         this.repositories = data;
     });
   }

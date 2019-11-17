@@ -1,4 +1,18 @@
-<div class="pages">
+<div *ngIf="!loaded">
+  <div id="loader">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="loading"></div>
+  </div>
+</div>
+
+<div class="pages" *ngIf="loaded">
   <h1>GitHub</h1>
   <div class="container" *ngFor="let repository of repositories">
     <div><img class="avatar" src="assets/penguin.jpg" /></div>
@@ -10,6 +24,6 @@
       <div class="btn-div"><button class="raised-button"><a href="{{ repository.node.url }}" target="_blank">View Code</a></button></div>
     </div>
   </div>
+  
+  <app-footer></app-footer>
 </div>
-
-<app-footer></app-footer>
