@@ -9,17 +9,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './views/navbar/navbar.component';
-import { FooterComponent } from './views/footer/footer.component';
 import { HomeComponent } from './views/home/home.component';
-import { AboutComponent } from './views/about/about.component';
-import { ProjectsComponent } from './views/projects/projects.component';
 import { AppRoutingModule } from './app-routing.module';
-import { PostListComponent } from './views/posts/post-list/post-list.component';
-import { PostSingleComponent } from './views/posts/post-single/post-single.component';
-import { GithubComponent } from './views/github/github.component';
-import { ContactComponent } from './views/contact/contact.component';
 import { environment } from 'environments/environment';
-import { ReplaceLineBreaksPipe } from './pipes/replace-line-breaks.pipe';
+
+import { AboutModule } from './about/about.module';
+import { ContactModule } from './contact/contact.module';
+import { GithubModule } from './github/github.module';
+import { PostsModule } from './posts/posts.module';
+import { FooterModule } from './footer/footer.module';
+import { PipesModule } from './pipes/pipes.module';
 
 import 'hammerjs';
 
@@ -32,26 +31,23 @@ import 'hammerjs';
     HttpLinkModule,
     ApolloModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AboutModule,
+    ContactModule,
+    GithubModule,
+    PostsModule,
+    FooterModule,
+    PipesModule
   ],
   declarations: [
     AppComponent,
     NavbarComponent,
-    FooterComponent,
-    HomeComponent,
-    AboutComponent,
-    ProjectsComponent,
-    PostListComponent,
-    PostSingleComponent,
-    GithubComponent,
-    ContactComponent,
-    ReplaceLineBreaksPipe
+    HomeComponent
   ],
   providers: [],
   bootstrap: [
     AppComponent
-  ],
-  exports: [ReplaceLineBreaksPipe]
+  ]
 })
 export class AppModule {
   constructor(apollo: Apollo, httpLink: HttpLink) {

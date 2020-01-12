@@ -2,12 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './views/home/home.component';
-import { AboutComponent } from './views/about/about.component';
-import { ProjectsComponent } from './views/projects/projects.component';
-import { PostListComponent } from './views/posts/post-list/post-list.component';
-import { PostSingleComponent } from './views/posts/post-single/post-single.component';
-import { GithubComponent } from './views/github/github.component';
-import { ContactComponent } from './views/contact/contact.component';
 
 const routes: Routes = [
   {
@@ -16,27 +10,23 @@ const routes: Routes = [
   },
   {
     path: 'about',
-    component: AboutComponent
-  },/*
-  {
-    path: 'projects',
-    component: ProjectsComponent
-  },*/
+    loadChildren: () => import('./about/about.module').then(m => m.AboutModule)
+  },
   {
     path: 'github',
-    component: GithubComponent
+    loadChildren: () => import('./github/github.module').then(m => m.GithubModule)
   },
   {
     path: 'blog',
-    component: PostListComponent
+    loadChildren: () => import('./posts/posts.module').then(m => m.PostsModule)
   },
   {
     path: 'contact',
-    component: ContactComponent
+    loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
   },
   {
     path: ':slug',
-    component: PostSingleComponent
+    loadChildren: () => import('./posts/posts.module').then(m => m.PostsModule)
   }
 ];
 
