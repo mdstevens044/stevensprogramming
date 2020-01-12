@@ -21,7 +21,7 @@
       <div class="description">{{ repository.node.description }}</div>
       <div class="language" *ngFor="let language of repository.node.languages.edges">{{ language.node.name }} &nbsp;</div>
       <div class="clear"></div>
-      <div class="btn-div"><button class="raised-button"><a href="{{ repository.node.url }}" target="_blank">View Code</a></button></div>
+      <div class="btn-div"><button class="raised-button" aria-label="View Code"><a href="{{ repository.node.url }}" target="_blank">View Code</a></button></div>
     </div>
   </div>
   
