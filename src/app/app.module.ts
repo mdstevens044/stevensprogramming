@@ -20,6 +20,8 @@ import { PostsModule } from './posts/posts.module';
 import { FooterModule } from './footer/footer.module';
 import { PipesModule } from './pipes/pipes.module';
 
+import { ServiceWorkerModule } from '@angular/service-worker';
+
 import 'hammerjs';
 
 @NgModule({
@@ -37,7 +39,8 @@ import 'hammerjs';
     GithubModule,
     PostsModule,
     FooterModule,
-    PipesModule
+    PipesModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   declarations: [
     AppComponent,
