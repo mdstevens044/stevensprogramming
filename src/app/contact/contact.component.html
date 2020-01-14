@@ -1,7 +1,6 @@
 <div class="pages">
   <h1>Contact Me</h1>
-  <p>If you are looking for a web developer to help create your website, please feel free to reach out by emailing me at 
-        <span class="email-address">mdstevens044@gmail.com</span>. I will try to get back with you within 1-2 days.</p>
+  <p [innerHTML]="contact | replaceLineBreaks"></p>
 </div>
 
 <app-footer></app-footer>
