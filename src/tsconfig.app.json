@@ -2,16 +2,22 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "outDir": "../out-tsc/app",
-    "module": "esNext",
+    "module": "esnext",
     "baseUrl": "",
     "types": [
       "isomorphic-fetch"
     ]
   },
   "angularCompilerOptions": {
-    "enableIvy": true,
-    "allowEmptyCodegenFiles": true
+    "enableIvy": true
   },
+  "files": [
+    "main.ts",
+    "polyfills.ts"
+  ],
+  "include": [
+    "src/**/*.d.ts"
+  ],
   "exclude": [
     "test.ts",
     "**/*.spec.ts"
