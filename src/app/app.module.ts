@@ -11,13 +11,6 @@ import { HomeComponent } from './views/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { environment } from 'environments/environment';
 
-import { AboutModule } from './about/about.module';
-import { ContactModule } from './contact/contact.module';
-import { GithubModule } from './github/github.module';
-import { PostsModule } from './posts/posts.module';
-import { FooterModule } from './footer/footer.module';
-import { PipesModule } from './pipes/pipes.module';
-
 import { ServiceWorkerModule } from '@angular/service-worker';
 
 import 'hammerjs';
@@ -30,12 +23,6 @@ import 'hammerjs';
     HttpClientModule,
     HttpLinkModule,
     ApolloModule,
-    AboutModule,
-    ContactModule,
-    GithubModule,
-    PostsModule,
-    FooterModule,
-    PipesModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   declarations: [
