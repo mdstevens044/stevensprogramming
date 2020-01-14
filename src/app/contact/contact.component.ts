@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { environment } from 'environments/environment';
 import * as Butter from 'buttercms';
@@ -9,7 +9,7 @@ import * as Butter from 'buttercms';
   styleUrls: ['./contact.component.css']
 })
 
-export class ContactComponent {
+export class ContactComponent implements OnInit {
   contact: any;
   butterService = Butter(environment.butterCMS);
 
