@@ -1,4 +1,7 @@
 {
+  "extends": [
+    "@phenomnomnominal/angular-lazy-routes-fix"
+  ],
   "rulesDirectory": [
     "node_modules/codelyzer"
   ],
@@ -123,6 +126,7 @@
     "directive-class-suffix": true,
     "no-access-missing-member": true,
     "templates-use-public": true,
-    "invoke-injectable": true
+    "invoke-injectable": true,
+    "no-lazy-module-paths": [ true, "async" ]
   }
 }

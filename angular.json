@@ -25,7 +25,9 @@
               "src/styles.css"
             ],
             "scripts": [],
-            "aot": true
+            "aot": true,
+            "optimization": true,
+            "buildOptimizer": true
           },
           "configurations": {
             "production": {
@@ -35,8 +37,8 @@
               "extractCss": true,
               "namedChunks": false,
               "aot": true,
-              "extractLicenses": true,
-              "vendorChunk": false,
+              "extractLicenses": false,
+              "vendorChunk": true,
               "buildOptimizer": true,
               "fileReplacements": [
                 {
