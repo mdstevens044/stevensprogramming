@@ -9,7 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "compress": "node compress.js"
+    "compress": "node compress.js",
+    "postinstall": "ivy-ngcc"
   },
   "private": true,
   "dependencies": {
@@ -20,7 +21,6 @@
     "@angular/compiler": "^8.2.14",
     "@angular/compiler-cli": "^8.2.14",
     "@angular/core": "^8.2.14",
-    "@angular/forms": "^8.2.14",
     "@angular/http": "^7.2.16",
     "@angular/platform-browser": "^8.2.14",
     "@angular/platform-browser-dynamic": "^8.2.14",
@@ -97,6 +97,6 @@
     "rollup-plugin-uglify": "^6.0.4",
     "source-map-explorer": "^2.2.2",
     "tslint": "^5.20.1",
-    "typescript": "~3.5.3"
+    "typescript": "^3.7.4"
   }
 }
