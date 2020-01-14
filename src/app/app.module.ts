@@ -4,7 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { ApolloModule, Apollo } from 'apollo-angular';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './views/navbar/navbar.component';
@@ -31,8 +30,6 @@ import 'hammerjs';
     HttpClientModule,
     HttpLinkModule,
     ApolloModule,
-    FormsModule,
-    BrowserAnimationsModule,
     AboutModule,
     ContactModule,
     GithubModule,

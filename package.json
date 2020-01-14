@@ -9,8 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "compress": "node compress.js",
-    "postinstall": "ngcc"
+    "compress": "node compress.js"
   },
   "private": true,
   "dependencies": {
@@ -97,6 +96,6 @@
     "rollup-plugin-uglify": "^6.0.4",
     "source-map-explorer": "^2.2.2",
     "tslint": "^5.20.1",
-    "typescript": "^3.7.4"
+    "typescript": "^3.6.4"
   }
 }
