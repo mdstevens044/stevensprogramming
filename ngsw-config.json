@@ -5,7 +5,6 @@
     {
       "name": "app",
       "installMode": "prefetch",
-      "updateMode": "prefetch",
       "resources": {
         "files": [
           "/favicon.ico",
@@ -24,7 +23,26 @@
         "files": [
           "/assets/**",
           "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
+        ],
+        "urls": [
+          "https://cdnjs.cloudflare.com/**",
+          "https://api.buttercms.com/**"
         ]
+      }
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "local-api",
+      "urls": [
+        "http://localhost:4200/**",
+        "https://stevensprogramming.com/**",
+        "https://api.buttercms.com/**"
+      ],
+      "cacheConfig": {
+        "maxSize": 100,
+        "maxAge": "1d",
+        "strategy": "performance"
       }
     }
   ]
