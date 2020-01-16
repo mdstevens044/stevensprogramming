@@ -1,6 +1,21 @@
 {
   "$schema": "./node_modules/@angular/service-worker/config/schema.json",
   "index": "/index.html",
+  "dataGroups": [
+    {
+      "name": "local-api",
+      "urls": [
+        "http://localhost:4200/**",
+        "https://stevensprogramming.com/**",
+        "https://api.buttercms.com/v2/**"
+      ],
+      "cacheConfig": {
+        "maxSize": 100,
+        "maxAge": "1d",
+        "strategy": "performance"
+      }
+    }
+  ],
   "assetGroups": [
     {
       "name": "app",
@@ -26,23 +41,8 @@
         ],
         "urls": [
           "https://cdnjs.cloudflare.com/**",
-          "https://api.buttercms.com/**"
+          "https://api.buttercms.com/v2/**"
         ]
-      }
-    }
-  ],
-  "dataGroups": [
-    {
-      "name": "local-api",
-      "urls": [
-        "http://localhost:4200/**",
-        "https://stevensprogramming.com/**",
-        "https://api.buttercms.com/**"
-      ],
-      "cacheConfig": {
-        "maxSize": 100,
-        "maxAge": "1d",
-        "strategy": "performance"
       }
     }
   ]
