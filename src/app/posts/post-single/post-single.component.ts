@@ -1,9 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import { Observable } from 'rxjs';
+import { map, take } from 'rxjs/operators';
+
 import { Apollo } from 'apollo-angular';
 
 import gql from 'graphql-tag';
 import 'rxjs-compat/add/operator/map';
+
+import { environment } from 'environments/environment';
+import * as Butter from 'buttercms';
 
 @Component({
   selector: 'app-post-single',
@@ -13,37 +19,27 @@ import 'rxjs-compat/add/operator/map';
 })
 
 export class PostSingleComponent implements OnInit {
-
+  protected slug$: Observable<string>;
   post: any;
+  butterService = Butter(environment.butterCMS);
 
-  constructor( private route: ActivatedRoute, private apollo: Apollo  ) { }
+  constructor(protected route: ActivatedRoute) { }
 
-  ngOnInit() {
-    this.route.params.forEach((params: Params) => {
-      this.apollo
-        .use('graphCms')
-        .watchQuery<any>({
-          query: gql`
-            query SinglePost($slug: String!) {
-              posts(where: {slug: $slug})
-              {
-                createdAt,
-                title,
-                coverImage {
-                  url
-                },
-                content
-              }
-            }
-          `,
-          variables: {
-            slug: params['slug']
-          }
-        })
-        .valueChanges.map((result: any) => result.data.posts[0])
-        .subscribe(data => {
-          this.post = data;
-        });
-    });
-  }
+    ngOnInit() {
+        this.slug$ = this.route.paramMap
+            .pipe(
+                map(params => (params.get('slug')))
+            );
+
+        this.slug$.pipe(
+            take(1))
+            .subscribe(slug => {
+                this.butterService.post.retrieve(slug)
+                    .then((res) => {
+                        this.post = res.data;
+                    }).catch((res) => {
+                    console.log(res);
+                });
+            });
+    }
 }

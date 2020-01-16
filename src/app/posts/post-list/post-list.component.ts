@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Apollo } from 'apollo-angular';
 
-import gql from 'graphql-tag';
-import 'rxjs-compat/add/operator/map';
+import { environment } from 'environments/environment';
+import * as Butter from 'buttercms';
 
 @Component({
   selector: 'app-post-list',
@@ -13,35 +12,19 @@ import 'rxjs-compat/add/operator/map';
 })
 
 export class PostListComponent implements OnInit {
-
   posts: any;
   postExist = false;
+  butterService = Butter(environment.butterCMS);
 
-  constructor( private router: Router, private apollo: Apollo ) { }
+  constructor( private router: Router ) { }
 
   ngOnInit() {
-    this.apollo
-      .use('graphCms')
-      .watchQuery<any>({
-        query: gql`
-          {
-            posts(where: {status: PUBLISHED}, orderBy:createdAt_DESC)
-            {
-              createdAt,
-              title,
-              slug,
-              coverImage {
-                url
-              },
-              excerpt
-            }
-          }
-        `
-      })
-      .valueChanges.map((result: any) => result.data.posts)
-      .subscribe(data => {
-        this.posts = data;
-        if(Object.keys(data).length !== 0) { this.postExist = true; }
+    this.butterService.post.list({
+      page: 1,
+      page_size: 10
+    }).then((res) => {
+        this.posts = res.data.data;
+        this.postExist = true;
     });
   }
 
