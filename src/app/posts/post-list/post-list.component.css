@@ -3,7 +3,7 @@
   min-height: 47em;
 }
 .centerImg {
-  margin: auto;
+  margin: 0 auto;
   display: block;
   padding-bottom: 20px;
   width: 600px;
@@ -30,10 +30,12 @@
 }
 .main-text {
   margin: 0 8px;
+  width: 100%;
 }
 .title {
   font-weight: 700;
   font-size: 20px;
+  margin-left: 25px;
 }
 .excerpt p {
   font-size: 16px;

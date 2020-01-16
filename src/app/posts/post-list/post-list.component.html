@@ -12,9 +12,9 @@
       <div><img class="avatar" src="assets/penguin.jpg" /></div>
       <div class="main-text">
         <div class="title">{{ post.title }}</div>
-        <div><img class="centerImg" src="{{ post.coverImage.url }}" /></div>
-        <div class="excerpt"><p>{{ post.excerpt }}</p></div>
-        <div><button (click)="selectPost(post.slug)" class="raised-button" aria-label="Read">Read</button></div>
+        <div><img *ngIf="post.featured_image" class="centerImg" src="{{ post.featured_image }}" /></div>
+        <div class="excerpt"><p>{{ post.summary }}</p></div>
+        <div><button [routerLink]="[post.slug]"  class="raised-button" aria-label="Read">Read</button></div>
         <div class="clear"></div>
       </div>
     </div>

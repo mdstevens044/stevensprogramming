@@ -1,10 +1,9 @@
 <div class="pages">
   <div class="container" *ngIf="post">
-    <div><img class="avatar" src="assets/penguin.jpg" /></div>
     <div class="main-text">
-      <div class="title">{{ post.title }}</div>
-      <div><img class="centerImg" src="{{ post.coverImage.url }}" /></div>
-      <div class="post-content"><p>{{ post.content }}</p></div>
+      <div class="title"><h2>{{ post.data.title }}</h2></div>
+      <div><img *ngIf="post.data.featured_image" class="centerImg" src="{{ post.data.featured_image }}" /></div> 
+      <div class="post-content" [innerHTML]="post.data.body"></div>
       <div><button [routerLink]="['/blog']" class="raised-button" aria-label="Back">Back</button></div>
       <div class="clear"></div>
     </div>
