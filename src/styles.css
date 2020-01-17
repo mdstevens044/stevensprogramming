@@ -36,7 +36,7 @@ body {
   font-size: 50px;
 }
 .pages p {
-  font-size: larger;
+  font-size: 16px;
 }
 .raised-button {
   box-sizing: border-box;
@@ -89,6 +89,14 @@ body {
     font-size: 35px;
   }
   .pages p {
-    font-size: large;
+    font-size: 14px;
+  }
+  .pages h3 {
+    font-size: 16px !important;
+  }
+  .inline-img {
+    width: 90vw !important;
+    height: auto !important;
+    margin-left: -40px !important;
   }
 }
