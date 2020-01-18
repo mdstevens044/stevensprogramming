@@ -13,7 +13,7 @@ html {
 }
 body {
   font-family: 'Noto Sans', Arial, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   background-image: url("/assets/circles-light.png");
   color: #333333;
   margin: 0;
@@ -36,7 +36,10 @@ body {
   font-size: 50px;
 }
 .pages p {
-  font-size: 16px;
+  font-size: 18px;
+}
+.pages h3 {
+  font-size: 22px;
 }
 .raised-button {
   box-sizing: border-box;
@@ -95,7 +98,7 @@ body {
     font-size: 16px !important;
   }
   .inline-img {
-    width: 90vw !important;
+    width: 85vw !important;
     height: auto !important;
     margin-left: -40px !important;
   }
