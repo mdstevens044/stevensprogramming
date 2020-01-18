@@ -2,7 +2,7 @@
   "name": "stevensprogramming",
   "short_name": "stevensprogramming",
   "theme_color": "#31424B",
-  "background_color": "#fafafa",
+  "background_color": "#31424B",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
