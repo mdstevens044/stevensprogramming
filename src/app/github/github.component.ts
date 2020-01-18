@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Apollo } from 'apollo-angular';
 
 import gql from 'graphql-tag';
-import 'rxjs-compat/add/operator/map';
+// import 'rxjs-compat/add/operator/map';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-github',
