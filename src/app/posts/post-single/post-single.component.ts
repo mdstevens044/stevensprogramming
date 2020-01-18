@@ -3,11 +3,6 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map, take } from 'rxjs/operators';
 
-import { Apollo } from 'apollo-angular';
-
-import gql from 'graphql-tag';
-import 'rxjs-compat/add/operator/map';
-
 import { environment } from 'environments/environment';
 import * as Butter from 'buttercms';
 
