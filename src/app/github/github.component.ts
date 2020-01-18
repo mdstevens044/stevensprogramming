@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Apollo } from 'apollo-angular';
 
 import gql from 'graphql-tag';
-// import 'rxjs-compat/add/operator/map';
-import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-github',
@@ -47,10 +45,9 @@ export class GithubComponent implements OnInit {
           }
         `,
       })
-      .valueChanges.map((result: any) => result.data.viewer.repositories.edges)
-      .subscribe( data => {
+      .valueChanges.subscribe(({ data, loading }) => {
         this.loaded = true;
-        this.repositories = data;
+        this.repositories = data.viewer.repositories.edges;
     });
   }
 }
