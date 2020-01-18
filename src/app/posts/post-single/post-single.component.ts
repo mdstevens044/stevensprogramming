@@ -20,21 +20,26 @@ export class PostSingleComponent implements OnInit {
 
   constructor(protected route: ActivatedRoute) { }
 
-    ngOnInit() {
-        this.slug$ = this.route.paramMap
-            .pipe(
-                map(params => (params.get('slug')))
-            );
+  getPost() {
+    this.slug$ = this.route.paramMap
+        .pipe(
+            map(params => (params.get('slug')))
+        );
 
-        this.slug$.pipe(
-            take(1))
-            .subscribe(slug => {
-                this.butterService.post.retrieve(slug)
-                    .then((res) => {
-                        this.post = res.data;
-                    }).catch((res) => {
-                    console.log(res);
-                });
+    this.slug$.pipe(
+        take(1))
+        .subscribe(slug => {
+            this.butterService.post.retrieve(slug)
+                .then((res) => {
+                    this.post = res.data;
+                }).catch((res) => {
+                console.log(res);
             });
+        });
     }
+
+  ngOnInit() {
+    this.getPost();
+  }
+    
 }
