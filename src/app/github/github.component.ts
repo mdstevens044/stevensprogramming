@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewChecked } from '@angular/core';
 import { Apollo } from 'apollo-angular';
 
 import gql from 'graphql-tag';
@@ -9,10 +9,11 @@ import gql from 'graphql-tag';
   styleUrls: ['./github.component.css']
 })
 
-export class GithubComponent implements OnInit {
+export class GithubComponent implements OnInit, AfterViewChecked  {
 
   repositories: any;
   loaded = false;
+  mediaQuery = window.matchMedia( '(min-width: 811px)' );
 
   constructor( private apollo: Apollo ) { }
 
@@ -49,5 +50,13 @@ export class GithubComponent implements OnInit {
         this.loaded = true;
         this.repositories = data.viewer.repositories.edges;
     });
+  }
+
+  ngAfterViewChecked() {
+    if (this.mediaQuery.matches) {
+      document.getElementById('butter-cms').style.width = '22%';
+    } else {
+      document.getElementById('butter-cms').style.width = '40%';
+    }
   }
 }
