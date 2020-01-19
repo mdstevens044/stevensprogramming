@@ -89,4 +89,7 @@ img {
   .title {
     margin: 0 15px 0 0;
   }
+  .container {
+    margin-left: 5px !important;
+  }
 }

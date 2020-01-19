@@ -2,7 +2,7 @@
   <div class="container" *ngIf="post">
     <div class="main-text">
       <div class="title"><h2>{{ post.data.title }}</h2></div>
-      <div><img *ngIf="post.data.featured_image" class="centerImg" src="{{ post.data.featured_image }}" /></div> 
+      <div><img *ngIf="post.data.featured_image" class="centerImg" src="{{ post.data.featured_image }}" /></div>
       <div class="post-content" [innerHTML]="post.data.body"></div>
       <div><button [routerLink]="['/blog']" class="raised-button" aria-label="Back">Back</button></div>
       <div class="clear"></div>
