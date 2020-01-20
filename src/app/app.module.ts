@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { ApolloModule, Apollo } from 'apollo-angular';
+import { ClickOutsideModule } from 'ng-click-outside';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './views/navbar/navbar.component';
@@ -22,6 +23,7 @@ import 'hammerjs';
     HttpClientModule,
     HttpLinkModule,
     ApolloModule,
+    ClickOutsideModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   declarations: [
