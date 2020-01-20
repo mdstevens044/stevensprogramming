@@ -32,7 +32,6 @@
     "member-access": false,
     "member-ordering": [
       true,
-      "static-before-instance",
       "variables-before-functions"
     ],
     "no-arg": true,
@@ -58,8 +57,8 @@
     "no-string-literal": false,
     "no-string-throw": true,
     "no-switch-case-fall-through": true,
-    "no-trailing-whitespace": false,
-    "no-unused-expression": true,
+    "no-trailing-whitespace": true,
+    "no-unused-expression": false,
     "no-use-before-declare": true,
     "no-var-keyword": true,
     "object-literal-sort-keys": false,
