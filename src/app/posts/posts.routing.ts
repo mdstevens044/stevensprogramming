@@ -5,8 +5,9 @@ import { PostListComponent } from './post-list/post-list.component';
 import { PostSingleComponent } from './post-single/post-single.component';
 
 export const routes: Routes = [
-  { 
-    path: '', component: PostListComponent 
+  {
+    path: '',
+    component: PostListComponent
   },
   {
     path: ':slug',
