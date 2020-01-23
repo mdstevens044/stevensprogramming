@@ -10,7 +10,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
-    "compress": "node compress.js"
+    "compress": "node compress.js",
+    "analyze": "ng build --prod --stats-json && webpack-bundle-analyzer dist/stats.json"
   },
   "private": true,
   "dependencies": {
@@ -86,6 +87,7 @@
     "rollup-plugin-uglify": "^6.0.4",
     "source-map-explorer": "^2.2.2",
     "tslint": "^5.20.1",
-    "typescript": "^3.6.4"
+    "typescript": "^3.6.4",
+    "webpack-bundle-analyzer": "^3.6.0"
   }
 }
