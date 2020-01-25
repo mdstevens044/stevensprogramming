@@ -88,6 +88,10 @@ ul ul a {
     margin-left: 0;
   }
 
+  #sidebar .sidebar-nav {
+    top: 25%;
+  }
+
   .navbar {
     position: relative;
     z-index: 10;
