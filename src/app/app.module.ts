@@ -14,8 +14,6 @@ import { environment } from 'environments/environment';
 
 import { ServiceWorkerModule } from '@angular/service-worker';
 
-import 'hammerjs';
-
 @NgModule({
   imports: [
     BrowserModule,

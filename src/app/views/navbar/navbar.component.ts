@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { NavbarStoreService } from '../../services/navbar-store.service';
 
 @Component({
   selector: 'app-navbar',
@@ -12,7 +12,7 @@ export class NavbarComponent implements OnInit {
   navIcons: any[];
   navbarOpen = false;
 
-  constructor(private router: Router) {
+  constructor(public navbarState: NavbarStoreService) {
     this.routerLinks = [
       {label: 'Home', link: ''},
       {label: 'About', link: 'about'},
@@ -30,12 +30,24 @@ export class NavbarComponent implements OnInit {
     ];
   }
 
-  toggleNavbar() {
+  toggleNavbar()
+  {
+    this.navbarState.navbarState = !this.navbarState.navbarState;
+
+   /*
     this.navbarOpen = !this.navbarOpen;
+
+    if(this.navbarOpen)
+    {
+      document.getElementById('sidebar').className = 'active';
+    } else {
+      document.getElementById('sidebar').className = '';
+    }*/
   }
 
-  onClickedOutside(e: Event) {
-    this.navbarOpen ? this.toggleNavbar() : '';
+  onClickedOutside(e: Event)
+  {
+    this.navbarState.navbarState ? this.toggleNavbar() : '';
   }
 
   ngOnInit() { }
