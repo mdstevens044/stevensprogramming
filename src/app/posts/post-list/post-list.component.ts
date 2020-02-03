@@ -24,7 +24,7 @@ export class PostListComponent implements OnInit {
       page_size: 10
     }).then((res) => {
         this.posts = res.data.data;
-        this.postExist = true;
+        (this.posts != '') ? this.postExist = true : this.postExist;
     });
   }
 
