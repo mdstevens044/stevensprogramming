@@ -41,7 +41,7 @@
     "core-js": "^3.6.4",
     "debug": "^4.1.1",
     "graphql": "^14.5.8",
-    "graphql-tag": "^2.10.1",
+    "graphql-tag": "^2.10.3",
     "ng-click-outside": "^5.3.0",
     "rxjs": "^6.5.4",
     "tslib": "^1.10.0",
