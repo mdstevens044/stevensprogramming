@@ -31,7 +31,7 @@
     "@angular/tsc-wrapped": "^4.4.6",
     "@angular/upgrade": "^9.0.1",
     "@types/isomorphic-fetch": "0.0.35",
-    "apollo-angular": "^1.8.0",
+    "apollo-angular": "^1.9.1",
     "apollo-angular-link-http": "^1.9.0",
     "apollo-cache-inmemory": "^1.6.5",
     "apollo-client": "^2.6.8",
