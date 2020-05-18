@@ -4,15 +4,15 @@
   font-family: 'Noto Sans';
   font-style: normal;
   font-weight: 400;
-  src: local('Noto Sans'), url('/assets/fonts/noto-sans-v7-latin-regular.ttf') format('truetype');
   font-display:  swap;
+  src: local('Noto Sans'), url('/assets/fonts/noto-sans-v7-latin-regular.ttf') format('truetype');
 }
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
 body {
-  font-family: 'Noto Sans', Arial, sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-size: 18px;
   background-image: url("/assets/circles-light.png");
   color: #333333;
