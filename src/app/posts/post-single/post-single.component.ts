@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { map, take } from 'rxjs/operators';
 
 import { environment } from 'environments/environment';
-import * as Butter from 'buttercms';
+import Butter from 'buttercms';
 
 @Component({
   selector: 'app-post-single',
@@ -41,5 +41,5 @@ export class PostSingleComponent implements OnInit {
   ngOnInit() {
     this.getPost();
   }
-    
+
 }

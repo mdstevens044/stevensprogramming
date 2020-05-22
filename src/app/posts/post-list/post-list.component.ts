@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { environment } from 'environments/environment';
-import * as Butter from 'buttercms';
+import Butter from 'buttercms';
 
 @Component({
   selector: 'app-post-list',
