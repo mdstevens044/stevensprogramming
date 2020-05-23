@@ -1,5 +1,5 @@
 .banner {
-  background: url("../../../assets/jumbotron.png") repeat center;
+  background: url("../../../assets/jumbotron.jpg") repeat center;
   background-size: auto;
   position: fixed;
   top: 0;
@@ -47,7 +47,7 @@ p {
 }
 @media screen and (max-width: 810px) {
   .banner {
-    background: url("../../../assets/jumbotron.png") repeat center;
+    background: url("../../../assets/jumbotron.jpg") repeat center;
     background-size: 100% 100%;
     position: fixed;
     top: 0;
