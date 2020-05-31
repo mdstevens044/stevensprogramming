@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
-import { NavbarComponent } from './views/navbar/navbar.component';
 import { NavbarStoreService } from './services/navbar-store.service';
+import { Router, NavigationEnd } from '@angular/router';
+
+declare let ga: Function;
 
 @Component({
   selector: 'app-root',
@@ -11,11 +13,19 @@ import { NavbarStoreService } from './services/navbar-store.service';
 
 export class AppComponent implements OnInit {
 
-  // navbar = new NavbarComponent();
   private swipeCoord?: [number, number];
   private swipeTime?: number;
+  title = 'app';
 
-  constructor(private swUpdate: SwUpdate, public navbarState: NavbarStoreService) {}
+  constructor(private swUpdate: SwUpdate, public navbarState: NavbarStoreService, public router: Router) {
+    this.router.events.subscribe(event => {
+
+      if (event instanceof NavigationEnd) {
+        ga('set', 'page', event.urlAfterRedirects);
+        ga('send', 'pageview');
+      }
+    });
+  }
 
   ngOnInit() {
     if(this.swUpdate.isEnabled)
