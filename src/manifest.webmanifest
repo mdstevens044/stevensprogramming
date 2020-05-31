@@ -4,8 +4,8 @@
   "theme_color": "#31424B",
   "background_color": "#31424B",
   "display": "standalone",
-  "scope": "/",
-  "start_url": "/",
+  "scope": "https://stevensprogramming.com/",
+  "start_url": "https://stevensprogramming.com/",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
