@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "ng build --prod --aot",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -77,7 +77,6 @@
     "lodash": "^4.17.15",
     "phantomjs-prebuilt": "^2.1.16",
     "protractor": "^7.0.0",
-    "rollup": "^2.10.7",
     "source-map-explorer": "^2.4.2",
     "tslint": "^6.1.2",
     "typescript": "^3.8.3",
