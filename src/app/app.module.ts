@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { ApolloModule, Apollo } from 'apollo-angular';
+import { setContext } from 'apollo-link-context';
 import { ClickOutsideModule } from 'ng-click-outside';
 
 import { AppComponent } from './app.component';
@@ -36,8 +37,18 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 })
 export class AppModule {
   constructor(apollo: Apollo, httpLink: HttpLink) {
+    const http = httpLink.create({
+      uri: 'https://api.github.com/graphql'
+    })
+
+    const auth = setContext(() => ({
+      headers: {
+        'Authorization': `token ${environment.ghAccessToken}`,
+      }
+    }))
+
     apollo.create({
-      link: httpLink.create({ uri: environment.ghEndPoint }),
+      link: auth.concat(http),
       cache: new InMemoryCache()
     });
   }
