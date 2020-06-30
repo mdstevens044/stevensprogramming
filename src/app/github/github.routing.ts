@@ -7,4 +7,4 @@ export const routes: Routes = [
   { path: '', component: GithubComponent }
 ]
 
-export const routing: ModuleWithProviders = RouterModule.forChild(routes)
+export const routing: ModuleWithProviders<RouterModule> = RouterModule.forChild(routes)
