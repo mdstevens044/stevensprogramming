@@ -28,7 +28,13 @@
             "scripts": [],
             "aot": true,
             "optimization": true,
-            "buildOptimizer": true
+            "buildOptimizer": true,
+            "allowedCommonJsDependencies": [
+              "buttercms",
+              "axios",
+              "zen-observable",
+              "graphql-tag"
+            ]
           },
           "configurations": {
             "production": {
